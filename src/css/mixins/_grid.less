@@ -1,0 +1,9 @@
+.grid-mixin(@row, @column-start, @column-span, @row-span, @column-end: @column-start + @column-span, @row-end: @row + @row-span){
+  -ms-grid-row: @row;
+  -ms-grid-row-span: @row-span;
+  -ms-grid-column: @column-start;
+  -ms-grid-column-span: @column-span;
+
+  grid-column: @column-start ~'/' @column-end;
+  grid-row:  @row ~'/' @row-end;
+}

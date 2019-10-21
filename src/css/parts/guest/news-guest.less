@@ -1,0 +1,55 @@
+@import "../../config/config";
+@import "../../mixins/mixins";
+
+
+
+.news-items {
+  //.news-post-item-content-brief, h2.news-post-item-title {
+  //  width: 70%;
+  //}
+
+}
+
+.news-padding {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.news-post-item {
+  border-bottom: #eaf3f8 1px solid;
+  padding-bottom: 3em;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.news-page-content {
+
+
+
+  //.block__content {
+  //  padding: 0 30px 3em 30px;
+  //}
+
+
+
+  .news-items-single {
+    padding-top: 10px;
+
+    .news-post-item-content {
+      border-top: 1px solid #eeeeee;
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+
+    .news-post-item {
+      padding-bottom: 0;
+    }
+  }
+
+  .news-items.news-items-single {
+    .news-post-item-title {
+      font-size: 28px;
+    }
+  }
+}

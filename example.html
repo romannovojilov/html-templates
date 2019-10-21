@@ -1,0 +1,1036 @@
+
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="ru" />
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap-source/less/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/mainv2add.css" />
+    <script type="text/javascript" src="vendor/jquery2/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-source/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/modernizr/modernizr.js"></script>
+
+    <title>Capitalist.net - Удобная система интернет расчетов - Счета</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Capitalist.net - Удобная система интернет расчетов - Счета">
+    <!--<meta name="viewport" content="width=1200, user-scalable=yes">-->
+    <meta name="viewport" content="width=1200, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon/apple-touch-icon-180x180.png" />
+</head>
+<body class=" main-logged-layout">
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<header class="header" id="page-guest-header">
+    <div class="toolbar header__toolbar bg-green">
+        <div class="container">
+            <div class="toolbar__left">
+                <ul class="list-inline">
+                    <li>
+                        <span>Баланс: </span>
+                    </li>
+                    <li>
+                        <a href="/finance" class="text-light">
+                            <span class="cap-icon cap-icon-dollar text-transparent text-v-middle"></span>
+                            <span class="text-underline text-v-middle"><b>99 998 562 509,29</b></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/finance" class="text-light">
+                            <span class="cap-icon cap-icon-euro text-transparent text-v-middle"></span>
+                            <span class="text-underline text-v-middle"><b>47 511,44</b></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/finance" class="text-light">
+                            <span class="cap-icon cap-icon-rub text-transparent text-v-middle"></span>
+                            <span class="text-underline text-v-middle"><b>1 695 626,64</b></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/finance" class="text-light">
+                            <span class="cap-icon cap-icon-bitcoin text-transparent text-v-middle"></span>
+                            <span class="text-underline text-v-middle"><b>992,96755225</b></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/finance" class="text-light">
+                            <span class="text-transparent text-v-middle">BCC</span>
+                            <span class="text-underline text-v-middle"><strong>2,0718123</strong></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="toolbar__right">
+                <ul class="list-inline text-semi-bold">
+                    <li>
+                        <a href="/faq">
+                            <span class="cap-icon cap-icon-question-circle text-transparent text-v-middle"></span>
+                            <span class="text-v-middle">Частые вопросы</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contacts">
+                            <span class="cap-icon cap-icon-headphones text-transparent text-v-middle"></span>
+                            <span class="text-v-middle">Служба поддержки</span>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="lng-switcher dropdown">
+                            <button class="btn btn-sm btn-transparent btn-contrast lng-switcher__toggle dropdown-toggle"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="true" style="text-transform: uppercase;">
+                                ru            <span class="caret"></span>
+                            </button>
+                            <ul class="lng-switcher__menu dropdown-menu">
+                                <li>
+                                    <button class="btn-link" href="/finance?lang=ru">
+                                        RU
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn-link" href="/finance?lang=en">
+                                        EN
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="nav nav_vertical-middle header__nav">
+        <div class="container">
+            <div class="nav__logo">
+                <a class="logo-svg logo-wrapper" href="/finance" title="Capitalist.net">
+                    <!-- div class="logo-snowflake-cover"></div -->
+                    <!-- <span class="cap-color-icon-birthday-2019-baloons" style="font-size: 82px;
+    margin-top: -19px;
+    position: absolute;"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span><span class="path48"></span><span class="path49"></span><span class="path50"></span><span class="path51"></span><span class="path52"></span></span> -->
+                    <i class="capitalist-icon-capitalist-logo-headed"></i>
+                </a>
+            </div>
+            <div class="nav__menu nav__menu_right">
+                <ul class="list-inline">
+                    <li>
+                        <div class="notification border-colored border-circle header-notification-has-no-replies"
+                             data-placement="bottom" data-toggle="tooltip" data-title="Система внутренних сообщений.">
+                            <a href="/support/issues"
+                               title="Служба поддержки">
+                                <span class="cap-icon cap-icon-bell-o notification__icon"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav__menu_sep"></li>
+                    <li>
+
+
+                        <div class="user-dropdown dropdown">
+                            <a href="" class="dropdown-trigger user-dropdown__trigger clear-link"
+                               data-toggle="dropdown">
+                                <div class="user-toolbar">
+                                    <div class="user-toolbar__avatar border-colored border-circle">
+                                        <div class="heading-user-avatar avatar-updatable" data-avatar-update-type="header" style="background-image: url(/assets/b3860126/layout/images/ava9.png);"></div>
+
+                                    </div>
+                                    <div class="user-toolbar__name">
+                                        <span>raymanlegal</span>
+                                    </div>
+                                    <div class="user-toolbar__dropdown-trigger">
+                                        <span class="caret text-muted"></span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu_header user-dropdown__menu user-menu"
+                                 data-dropdown-in="fadeIn"
+                                 data-dropdown-out="fadeOut">
+
+                                <div class="user-menu__header user-menu__section">
+                                    Статус: <span
+                                        class="text-success"><b>Верифицирован</b></span>
+                                </div>
+                                <div class="balance user-menu__balance user-menu__section">
+                                    <div class="balance__header">
+                                        Баланс<a href="/finance/deposit"
+                                                 class="pull-right"><b>Пополнить счет</b></a>
+                                    </div>
+                                    <div class="balance__list">
+                                        <div class="currency currency_stacked balance__item">
+                                            <div class="currency__sign">
+                                                <span class="cap-icon cap-icon-dollar currency__sign currency__sign_colored currency__sign_circle currency__sign_green"></span>
+                                            </div>
+                                            <div class="currency__value"><b>99 998 562 509,29</b>
+                                            </div>
+                                            <!--                                            <div class="currency__name">USD</div>-->
+                                        </div>
+                                        <div class="currency currency_stacked balance__item">
+                                            <div class="currency__sign">
+                                                <span class="cap-icon cap-icon-euro currency__sign currency__sign_colored currency__sign_circle currency__sign_blue"></span>
+                                            </div>
+                                            <div class="currency__value"><b>47 511,44</b>
+                                            </div>
+                                            <!--                                            <div class="currency__name">EUR</div>-->
+                                        </div>
+
+                                        <div class="currency currency_stacked balance__item">
+                                            <div class="currency__sign">
+                                                <span class="cap-icon cap-icon-bitcoin currency__sign currency__sign_colored currency__sign_circle currency__sign_orange"></span>
+                                            </div>
+                                            <div class="currency__value"><b>992,96755225</b>
+                                            </div>
+                                            <!--                                            <div class="currency__name">BTC</div>-->
+                                        </div>
+
+                                        <div class="currency currency_stacked balance__item">
+                                            <div class="currency__sign">
+                                                <span class="cap-icon cap-icon-rub currency__sign currency__sign_colored currency__sign_circle currency__sign_red"></span>
+                                            </div>
+                                            <div class="currency__value"><b>1 695 626,64</b>
+                                            </div>
+                                            <!--                                            <div class="currency__name">RUR</div>-->
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="user-menu__actions user-menu__section">
+                                    <ul>
+                                        <li>
+                                            <a href="/security">Настройки безопасности</a>
+                                        </li>
+                                        <li>
+                                            <a href="/profile">Персональная информация</a>
+                                        </li>
+                                        <li><a href="/fees">Тарифы</a>
+                                        </li>
+                                        <li>
+                                            <a href="/security/notifications">Центр уведомлений</a>
+                                        </li>
+                                        <li>
+                                            <a href="/profile/referral">Реферальная программа</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="nav__menu_sep"></li>
+                    <li>
+                        <a href="/logout" class="clear-link">
+                            <span class="cap-icon cap-icon-logout text-muted"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header><main class="main">
+    <div class="container">
+        <div class="row">
+            <aside class="aside col-xs-3 col-sm-3">
+                <div class="aside__item">
+                    <ul id="main-menu" class="menu menu_top menu_icon-styled menu_accordion aside__menu"
+                        data-accordion-single>
+                        <li>
+                            <a href="/finance" >
+                                <span class="cap-icon cap-icon-wallet"></span>
+                                <span>Мои счета</span>
+                            </a>
+                            <!--ul class="menu menu_sub collapse" id="aside-collapse_accounts">
+                                <li><a class="link" href="/finance/accounts#tab_accounts_accounts">Счета</a></li>
+                                                <li><a class="link" href="/finance/cards:my">Карты Capitalist</a></li>
+                                                <li><a class="link" href="/finance/accounts#tab_accounts_batches">Массовые платежи</a></li>
+                                                <!-- href="#tab_accounts_batches" data-toggle="tab" */-->
+                            <!--/ul-->
+                        </li>
+
+                        <li>
+                            <a href="/finance/templates">
+                                <span class="cap-icon cap-icon-documents"></span>
+                                <span>Мои шаблоны</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/finance/payout">
+                                <span class="cap-icon cap-icon-paper-plane"></span>
+                                <span>Переводы</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/finance/transfers:mass">
+                                <span class="cap-icon cap-icon-masspayment"></span>
+                                <span>Массовый платеж</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/finance/deposit">
+                                <span class="cap-icon cap-icon-money-add"></span>
+                                <span>Пополнение счета</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/finance/exchange">
+                                <span class="cap-icon cap-icon-money-exchange"></span>
+                                <span>Конвертация</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/cheques">
+                                <span class="cap-icon cap-icon-bill"></span>
+                                <span>Электронные чеки</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/finance/history">
+                                <span class="cap-icon cap-icon-clock"></span>
+                                <span>История операций</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/merchants">
+                                <span class="cap-icon cap-icon-payment"></span>
+                                <span>Прием платежей</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="aside__item aside__item__selectable aside-personal-manager">
+                    <h2>Ваш персональный менеджер</h2>
+
+                    <ul>
+                        <li><div class="glyphicon glyphicon-envelope"></div> <a href="mailto:s.oshurkov@capitalist.net" title="E-mail">s.oshurkov@capitalist.net</a></li>
+                        <li><div class="glyphicon glyphicon-send"></div> <a href="tg://resolve?domain=sergey_capitalist" title="Telegram">@sergey_capitalist</a></li>
+                    </ul>
+                </div>
+                <div class="aside__item aside__item__selectable">
+                    <h2>Новости</h2>
+                    <div class="post-short post-short_stacked">
+                        <div class="post-short__date">
+                            16.10.2018            </div>
+                        <div class="post-short__title">
+                            <a href="/news/read/id/186">Благодарность организаторам и фототчет по MAC&#039;2018</a>
+                        </div>
+                    </div>
+                    <div class="post-short post-short_stacked">
+                        <div class="post-short__date">
+                            11.07.2018            </div>
+                        <div class="post-short__title">
+                            <a href="/news/read/id/181">Платежи на банковские карты Visa (Worldwide)</a>
+                        </div>
+                    </div>
+                    <div class="post-short post-short_stacked">
+                        <div class="post-short__date">
+                            02.07.2018            </div>
+                        <div class="post-short__title">
+                            <a href="/news/read/id/178">Платежи на карты банков РФ</a>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="/news" class="btn btn-success">Все новости</a>
+                    </div>
+                </div>
+
+                <div class="ad ad-referral aside__item aside__item__selectable">
+                    <div class="text-center">
+                        <div class="ad__header">
+                            <h2>Реферальная программа</h2>
+                        </div>
+                        <div class="ad__body">
+                            Capitalist приглашает <br> всех желающих <br> поучаствовать в нашей <br> реферальной программе.        </div>
+                        <div class="ad__footer">
+                            <a href="/profile/referral"
+                               title="Реферальная программа"
+                               class="btn btn-success">Узнать больше</a>
+                        </div>
+                    </div>
+                </div><div class="aside__item aside__item__selectable">
+                <h2>Курсы валют</h2>
+                <div class="pair-list pair-list_stacked">
+                    <span class="text-muted pair-list__heading">Я продаю</span>
+                    <ul class="list list-stacked">
+                        <li>
+                            <span class="pair__name">EUR/USD</span>
+                            <span class="pair__sep text-muted"></span>
+                            <span class="pair__coef">1,06</span>
+                        </li>
+                        <li>
+                            <span class="pair__name">BTC/USD</span>
+                            <span class="pair__sep text-muted"></span>
+                            <span class="pair__coef">8 420,42</span>
+                        </li>
+                        <li>
+                            <span class="pair__name">BTC/EUR</span>
+                            <span class="pair__sep text-muted"></span>
+                            <span class="pair__coef">6 974,14</span>
+                        </li>
+                        <li>
+                            <span class="pair__name">BTC/RUR</span>
+                            <span class="pair__sep text-muted"></span>
+                            <span class="pair__coef">525 040,52</span>
+                        </li>
+                        <li>
+                            <span class="pair__name">USD/RUR</span>
+                            <span class="pair__sep text-muted"></span>
+                            <span class="pair__coef">63,59</span>
+                        </li>
+                        <li>
+                            <span class="pair__name">EUR/RUR</span>
+                            <span class="pair__sep text-muted"></span>
+                            <span class="pair__coef">69,77</span>
+                        </li>
+                    </ul>
+                    <span class="text-muted pair-list__heading">Я покупаю</span>
+                    <ul class="list list-stacked">
+                        <li>
+                            <span class="pair__name">EUR/USD</span>
+                            <span class="pair__sep text-muted"></span>
+                            <span class="pair__coef">1,18</span>
+                        </li>
+                        <li>
+                            <span class="pair__name">USD/RUR</span>
+                            <span class="pair__sep text-muted"></span>
+                            <span class="pair__coef">65,31</span>
+                        </li>
+                        <li>
+                            <span class="pair__name">EUR/RUR</span>
+                            <span class="pair__sep text-muted"></span>
+                            <span class="pair__coef">73,30</span>
+                        </li>
+                        <li>
+                            <span class="pair__name">BTC/USD</span>
+                            <span class="pair__sep text-muted"></span>
+                            <span class="pair__coef">8 760,40</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>            </aside>
+            <div class="content main__content col-xs-9 col-sm-9">
+
+                <script type="text/x-template" id="crypto-accounts-list-controls-template">
+                    <div class="dropdown dropdown_full-width dropdown_style-1">
+                        <a :href="'#x-cryp-accounts_account_' + account.number" class="dropdown-trigger"
+                           data-toggle="dropdown">
+                            <span class="cap-icon cap-icon-menu-hamburger cap-icon_circle center-block"></span>
+                        </a>
+                        <ul :id="'x-cryp-accounts_account_' + account.number"
+                            class="dropdown-menu">
+                            <li v-if="account.isDepositable">
+                                <a :href="account.urlDeposit">Пополнить</a>
+                            </li>
+                            <li v-if="account.isTransferable">
+                                <a :href="account.urlTransfer">Перевести</a>
+                            </li>
+                            <li v-if="account.exchangeable">
+                                <a :href="account.urlExchange">
+                                    Обменять                </a>
+                            </li>
+                            <li v-if="account.canIssueCheque">
+                                <a :href="account.urlIssueCheque">Выпустить чек</a>
+                            </li>
+                            <li v-if="account.hasHistory">
+                                <a :href="account.urlHistory">История операций</a>
+                            </li>
+                        </ul>
+                    </div>
+                </script>
+
+                <script type="text/x-template" id="crypto-wallets-block-template">
+                    <div class="tile tile_horizontal">
+                        <div class="tile__body">
+                            <div class="tile__header ">
+                                <h2>Кошельки в криптовалюте</h2>
+                            </div>
+                            <div v-for="account in accounts" class="tile tile_horizontal tile_bill">
+
+                                <div class="tile__media">
+                                    <div class="circle-wrapper">
+                                        <div class="pair pair_stacked pair_circle border-circle border-colored border-colored-2x text-center">
+                                            <amount-format  class="pair__coef"
+                                                            :currency="account.currency"
+                                                            :nobr="false"
+                                                            zero-custom-format="0,0.00"
+                                                            custom-format="0,0.00000"
+                                                            :amount="summaryBalance(account.currency)"></amount-format>
+                                            <span class="pair__name">{{ account.currency }}</span>
+                                            <!--                                <span class="pair__name">USD</span>-->
+                                            <span class="badge badge_backdrop-lg">
+                                        <span class="cap-icon currency__sign currency__sign_colored  currency__sign_circle"
+                                              v-bind:class="iconClasses(account.currency)"></span>
+                                    </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tile__body">
+
+
+
+                                    <table class="table bill__table" v-if="accounts && (accounts.length > 0)">
+                                        <thead>
+                                        <tr>
+                                            <th class="bill__name">Название</th>
+                                            <th class="bill__number">№ счета</th>
+                                            <th class="bill__balance">Баланс</th>
+                                            <th class="bill__control">Управление</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr >
+                                            <td class="bill__name">
+                                                <accounts-list-name-editor :account="account"
+                                                                           :editor-options="nameEditorOptions" @renamed="function(newValue) { account.name = newValue; }"></accounts-list-name-editor>
+                                            </td>
+
+                                            <td class="bill__number">
+                                                <b>{{ account.number }}</b>
+                                            </td>
+                                            <td class="bill__balance">
+                                                <strong><amount-format :amount="account.availBalance"
+                                                                       :currency="account.currency"></amount-format></strong>
+                                                {{ account.currency }}
+                                            </td>
+                                            <td class="bill__control">
+                                                <accounts-list-controls
+                                                        v-if="account.hasControls"
+                                                        :account="account"></accounts-list-controls>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div v-else class="text-center text-muted">
+                                        <p>
+                                            У вас нет ни одного кошелька в криптовалюте.                        </p>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </script>
+
+
+
+                <script type="text/x-template" id="bitcoin-addresses-block-template">
+                    <div v-if="true || hasWallets" v-cloak class="bitcoin-wallets-list">
+                        <div class="block__content ">
+                            <h2>Мои Bitcoin-адреса</h2>
+
+                            <div class="alert alert-warning" style="margin-left: 0; margin-right: 0; margin-bottom:0;">
+                                Обращаем Ваше внимание, на данные реквизиты принимаются ТОЛЬКО прямые платежи с кошельков Bitcoin.                <br/>
+                                В случае некорректно указанных данных комиссия за поиск составит 10% от суммы платежа.            </div>
+
+                            <div v-show="(wallets.length > 0) && (walletsToShow.length == 0)" class="" style="margin-top: 20px;"><span>Все ваши адреса Bitcoin скрыты.</span></div>
+                        </div>
+
+                        <div class="block__content no-pd "  v-if="walletsToShow.length > 0">
+
+                            <div class="tile__body">
+
+                                <!--        <br/>-->
+                                <div class="table-wrap">
+                                    <table class="table">
+                                        <tbody>
+
+                                        <tr v-for="wallet in walletsToShow">
+                                            <td style="padding-left:44px;"><bitcoin-wallet-editable-name :wallet="wallet"
+                                                                                                         @renamed="function(newValue) { wallet.name = newValue; }"></bitcoin-wallet-editable-name></td>
+                                            <td><span v-if="wallet.is_generating" class="text-muted muted">Идет процесс создания...</span><span v-if="!wallet.is_generating" v-bind:class="{'text-muted': wallet.deprecated || wallet.hidden}">{{ wallet.address }}</span>
+                                                <bitcoin-incoming-information :wallet="wallet" :incoming-info="incomingInfo"
+                                                                              v-if="!wallet.is_generating && !wallet.deprecated"></bitcoin-incoming-information>
+                                            </td>
+                                            <td class="text-right" style=" padding-right: 44px;"><a is="bitcoin-wallet-hide" v-show="!wallet.is_generating"
+                                                                                                    class="bitcoin-wallet-visibility-toggle"
+                                                                                                    title-hide="Скрыть"
+                                                                                                    title-show="Сделать видимым"
+                                                                                                    :wallet="wallet"
+                                                                                                    @hiding="wallet.hidden = true"
+                                                                                                    @showing="wallet.hidden = false"></a>
+                                            </td>
+                                        </tr>
+                                        <tr v-show="generator.isGenerating()">
+                                            <td style="padding-left:44px;" class="text-muted">...</td>
+                                            <td><span class="text-muted">Идет процесс создания...</span></td>
+                                            <td></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="block__content ">
+                            <div v-show="wallets.length == 0" class=""><p>У вас еще нет ни одного адреса Bitcoin.</p></div>
+                            <div class="clearfix">
+                                <div class="text-right">
+                                    <a href="#"
+                                       class="btn btn-link" v-show="hasHiddenWallets && showHidden"
+                                       @click.prevent="hideHiddenWallets()"><span>Не показывать скрытые адреса</span></a>
+
+                                    <a href="#"
+                                       class="btn btn-link" v-show="hasHiddenWallets && !showHidden"
+                                       @click.prevent="showHiddenWallets()"><span>Показать скрытые адреса</span></a>
+
+                                    <a href="#" @click.prevent=""
+                                       v-show="generator.isGenerating()"
+                                       class="btn btn-info">Генерируется новый адрес...</a>
+                                    <a href="#"
+                                       v-show="generator.isWait() && hasAvailCount"
+                                       @click.prevent="createAddress()"
+                                       class="btn btn-success" >Новый адрес</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </script>
+
+                <script type="text/x-template" id="bitcoin-incoming-info-block-template">
+                    <div v-if="hasIncomingData" class="bitcoin-incoming-transactions">
+                        <div v-for="transaction in incomingTransactions" class="bitcoin-incoming-transaction">
+                            <div class="bit-icon">⤷</div>
+                            <div class="bit-amount">В ожидании: <strong>{{ transaction.amount | moneyFormat(transaction.currency) }} {{transaction.currency}}</strong></div>
+                            <div class="bit-confirmations">
+                                <a :href="transaction.blockchaininfoUrl" title="Детали транзакции на blockchain.info" target="_blank">{{transaction.confirmations}} <number-plural-label lang="ru" :n="transaction.confirmations" t="подтверждение|подтверждения|подтверждений|подтверждения" empty=""></number-plural-label></a></div>
+                        </div>
+
+                    </div>
+                </script>
+                <script type="text/x-template" id="accounts-list-controls-template">
+                    <div class="dropdown dropdown_full-width dropdown_style-1">
+                        <a :href="'#x-accounts_account_' + account.number" class="dropdown-trigger"
+                           data-toggle="dropdown">
+                            <span class="cap-icon cap-icon-menu-hamburger cap-icon_circle center-block"></span>
+                        </a>
+                        <ul :id="'x-accounts_account_' + account.number"
+                            class="dropdown-menu">
+                            <li>
+                                <a :href="account.urlDeposit">Пополнить</a>
+                            </li>
+                            <li>
+                                <a :href="account.urlTransfer">Перевести</a>
+                            </li>
+                            <li>
+                                <a :href="account.urlExchange">
+                                    Обменять                </a>
+                            </li>
+                            <li>
+                                <a :href="account.urlIssueCheque">Выпустить чек</a>
+                            </li>
+                            <li>
+                                <a :href="account.urlHistory">История операций</a>
+                            </li>
+                        </ul>
+                    </div>
+                </script>
+
+                <script type="text/x-template" id="accounts-list-template">
+                    <div class="tile tile_horizontal tile_bill" v-if="dataReady">
+                        <div class="tile__media">
+                            <div class="circle-wrapper">
+                                <div class="pair pair_stacked pair_circle border-circle border-colored border-colored-2x text-center">
+                                    <amount-format  class="pair__coef"
+                                                    :currency="currency"
+                                                    :nobr="false"
+                                                    :amount="summaryBalance"></amount-format>
+                                    <span class="pair__name">{{ currency }}</span>
+                                    <!--                                <span class="pair__name">USD</span>-->
+                                    <span class="badge badge_backdrop-lg">
+                                        <span class="cap-icon currency__sign currency__sign_colored  currency__sign_circle"
+                                              v-bind:class="iconClasses"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tile__body">
+                            <table class="table bill__table">
+                                <thead>
+                                <tr>
+                                    <th class="bill__name">Название</th>
+                                    <th class="bill__number">№ счета</th>
+                                    <th class="bill__balance">Баланс</th>
+                                    <th class="bill__control">Управление</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr v-for="account in filteredAccounts">
+                                    <td class="bill__name">
+                                        <accounts-list-name-editor :account="account"
+                                                                   :editor-options="nameEditorOptions" @renamed="function(newValue) { account.name = newValue; }"></accounts-list-name-editor>
+                                    </td>
+                                    <td class="bill__number">
+                                        <strong>{{ account.number }}</strong>
+                                    </td>
+                                    <td class="bill__balance">
+                                        <strong><amount-format :amount="account.availBalance"
+                                                               :currency="account.currency"></amount-format></strong>
+                                        {{ account.currency }}
+                                    </td>
+                                    <td class="bill__control">
+                                        <accounts-list-controls v-if="!account.blocked" :account="account"></accounts-list-controls>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </script>
+                <script type="text/x-template" id="documents-table-row-controls-template">
+                    <div class="dropdown dropdown_full-width dropdown_style-1">
+                        <a :href="dropdownControlIdLink" class="dropdown-trigger"
+                           data-toggle="dropdown">
+                            <span class="cap-icon cap-icon-menu-hamburger cap-icon_circle center-block"></span>
+                        </a>
+                        <ul :id="dropdownControlId"
+                            class="dropdown-menu">
+                            <li :class="repeatLIClass" v-if="document.repeatable">
+                                <a :href="repeatUrl">Повторить платеж</a>
+                            </li>
+                            <li>
+                                <a :href="correspondentSearchUrl">Поиск по этому корреспонденту</a>
+                            </li>
+                        </ul>
+                    </div>
+                </script>
+
+                <script type="text/x-template" id="documents-table-template">
+                    <div>
+                        <table class="table table_text-center operations-list">
+                            <thead>
+                            <tr>
+                                <!--th class="operation__number">№</th-->
+                                <th class="operation__date">Дата</th>
+                                <th class="operation__status">Статус</th>
+                                <th class="operation__corr">Тип платежа</th>
+                                <!--th class="operation__corr">Корреспондент</th>
+                                <th class="operation__dest">Назначение</th-->
+                                <th class="operation__refill">Сумма</th>
+                                <th class="operation__refill" v-if="showFees">Комиссия</th>
+                                <!--                    <th class="operation__write-off">Списание</th>-->
+                                <th class="operation__repeat">Управление</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <template v-for="document in showDocuments">
+                                <tr :class="{'history-document-details-visible': isDetailsVisible(document.id)}">
+                                    <td class="operation__date">
+
+                                        <div class="details-toggler" @click.prevent="toggleDetails(document.id)">
+                                            <div class="details-toggler-icon-plus"></div>
+                                            <a class="operation-details_toggle" href="#"
+                                               @click.stop.prevent="toggleDetails(document.id)">
+                                                <strong>{{ document.created | formatTimestamp('D.MM.Y') }}</strong>
+                                                <br/>
+                                                {{ document.created | formatTimestamp('HH:mm:ss') }}
+                                            </a>
+                                        </div>
+
+                                    </td>
+                                    <td style="vertical-align: middle">
+                                        <state-icon :document="document"
+                                                    title-executed="Платеж исполнен."
+                                                    title-manual-process="Платеж в обработке."
+                                                    title-declined="Платеж отклонен."
+                                                    title-inprocess="Платеж в обработке."></state-icon>
+                                    </td>
+                                    <td class="operation__corr">
+                                        <beneficiary-details :document="document"></beneficiary-details>
+                                    </td>
+                                    <td class="word-nowrap">
+                                        <template v-if="document.selfExchange">
+                                            <div class="outgoing_payment">{{ document.amount | moneyFormat(document.currency) }} {{
+                                                document.currency }}
+                                            </div>
+                                            <div class="incoming_payment" style="margin-top:6px;">{{ document.destAmount |
+                                                moneyFormat(document.destCurrency) }} {{ document.destCurrency }}
+                                            </div>
+                                        </template>
+                                        <template v-if="!document.selfExchange">
+                                            <div :class="amountClass(document.outgoing)">{{ document.amount |
+                                                moneyFormat(document.currency) }} {{ document.currency }}
+                                            </div>
+                                        </template>
+                                    </td>
+                                    <td v-if="showFees" class="word-nowrap" style="vertical-align: middle;">
+                                        {{ document.tax | moneyFormat(document.currency) }} {{ document.currency }}
+                                    </td>
+                                    <td class="operation__repeat">
+                                        <document-controls :document="document"
+                                                           :correspondent-search-url="document.historyBeneficiarySearchUrl"
+                                                           :repeat-url="repeatUrl(document)"></document-controls>
+                                    </td>
+                                </tr>
+                                <tr is="payment-details-row"
+                                    v-show="isDetailsVisible(document.id)"
+                                    :document="document"
+                                    :show-fees="showFees"></tr>
+                            </template>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </script>
+
+                <script type="text/x-template" id="documents-table-beneficiary-details">
+                    <div class="documents-table-correspondent-details">
+                        <template v-if="document.selfExchange">
+                            <div>Конвертация валюты</div>
+                            <div style="padding-top: 5px; font-size: 85%;">
+                                <strong>
+                                    <beneficiary-link
+                                            class="sender-beneficiary"
+                                            title-searching="Идет поиск..."
+                                            title-owner-title="ваш аккаунт"
+                                            title-balance="Баланс"
+                                            :beneficiary="document.sender"
+                                            title-search="Поиск по корреспонденту"
+                                            :search-link="document.historyBeneficiarySearchUrl">{{ document.sender }}
+                                    </beneficiary-link>
+                                    &#10230;
+                                    <beneficiary-link
+                                            title-searching="Идет поиск..."
+                                            title-owner-title="ваш аккаунт"
+                                            title-balance="Баланс"
+                                            :beneficiary="document.receiver"
+                                            title-search="Поиск по корреспонденту"
+                                            :search-link="document.historyBeneficiarySearchUrl">{{ document.receiver }}
+                                    </beneficiary-link>
+                                </strong>
+                            </div>
+                        </template>
+                        <template v-if="!document.selfExchange">
+                            <template
+                                    v-if="!document.outgoing && isWire">Входящий платеж</template>
+                            <template v-if="(document.outgoing || !isWire)">{{ document.channel }}</template>
+                            <div v-if="isWireWithDetails" class="wire-corr-details">
+                                <strong>{{ document.corrDetails.corrName}}<br/>
+                                    <beneficiary-link
+                                            title-searching="Идет поиск..."
+                                            title-owner-title="ваш аккаунт"
+                                            title-balance="Баланс"
+                                            :beneficiary="document.corrDetails.corrBankAccount"
+                                            title-search="Поиск по корреспонденту"
+                                            :search-link="document.historyBeneficiarySearchUrl">{{ document.beneficiary }}
+                                    </beneficiary-link>
+                                    <br/>{{ document.corrDetails.corrBankName}}</strong>
+                            </div>
+                            <template v-if="!isWireWithDetails && isCorrespondentNotEmpty">
+                                <div style="padding-top: 5px;">
+                                    <small><strong>
+                                        <beneficiary-link
+                                                title-searching="Идет поиск..."
+                                                title-owner-title="ваш аккаунт"
+                                                title-balance="Баланс"
+                                                :beneficiary="document.beneficiary"
+                                                title-search="Поиск по корреспонденту"
+                                                :search-link="document.historyBeneficiarySearchUrl">{{ document.beneficiary }}
+                                        </beneficiary-link>
+                                    </strong></small>
+                                </div>
+                            </template>
+                            <div v-if="isWire && document.description" class="wire-corr-desc">&laquo;{{document.description}}&raquo;
+                            </div>
+                        </template>
+                    </div>
+                </script>
+
+                <script type="text/x-template" id="documents-table-opened-beneficiary-details">
+                    <div class="documents-table-correspondent-details">
+                        <template v-if="document.outgoing">{{ document.channel }}</template>
+                        <template v-if="!document.outgoing">Входящий платеж</template>
+                        <div v-if="isWireWithDetails" class="wire-corr-details">
+                            <strong>{{ document.corrDetails.corrName}},<br/>{{document.corrDetails.corrBankAccount}},<br/>{{
+                                document.corrDetails.corrBankName}}</strong>
+                        </div>
+                        <template v-if="!isWireWithDetails && isCorrespondentNotEmpty">
+                            <div style="padding-top: 5px;">
+                                <small><strong>
+                                    <beneficiary-link
+                                            title-searching="Идет поиск..."
+                                            title-owner-title="ваш аккаунт"
+                                            title-balance="Баланс"
+                                            :beneficiary="document.beneficiary"
+                                            title-search="Поиск по корреспонденту"
+                                            :search-link="document.historyBeneficiarySearchUrl">{{ document.beneficiary }}
+                                    </beneficiary-link>
+                                </strong></small>
+                            </div>
+                        </template>
+                    </div>
+                </script>
+
+                <script type="text/x-template" id="documents-table-details-row">
+                    <tr>
+                        <td :colspan="showFees ? 7 : 6"
+                            class="operation__details">
+                            <div class="payment-details-panel">
+                                <div class="pdp-col">
+                                    <div class="pdp-key-value">
+                                        <div class="key">Номер транзакции:</div>
+                                        <div class="value">{{ document.docNumber }}</div>
+                                    </div>
+                                    <div class="pdp-key-value">
+                                        <div class="key">Сумма операции:</div>
+                                        <div class="value">
+                                            <nobr>{{ document.amount | moneyFormat(document.currency) }} {{ document.currency }}</nobr>
+                                        </div>
+                                    </div>
+                                    <div class="pdp-key-value">
+                                        <div class="key">Комиссия:</div>
+                                        <div class="value">
+                                            <nobr>{{document.tax | moneyFormat(document.currency) }} {{ document.currency }}</nobr>
+                                        </div>
+                                    </div>
+                                    <div class="pdp-key-value" v-if="document.sender && !isCapitalistSystem">
+                                        <div class="key">Отправитель:</div>
+                                        <div class="value">{{ document.sender }}</div>
+                                    </div>
+                                    <div class="pdp-key-value" v-if="!document.outgoing && isWireWithDetails">
+                                        <div class="key">Корреспондент:</div>
+                                        <div class="value">{{ document.corrDetails.corrName}}, {{document.corrDetails.corrBankAccount}},
+                                            {{ document.corrDetails.corrBankName}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pdp-col">
+                                    <div class="pdp-key-value">
+                                        <div class="key">Статус:</div>
+                                        <div class="value"><span is="document-state" :document="document"
+                                                                 title-executed="Платеж исполнен."
+                                                                 title-manual-process="Платеж в обработке."
+                                                                 title-declined="Платеж отклонен."
+                                                                 title-inprocess="Платеж в обработке."
+                                        ></span></div>
+                                    </div>
+                                    <div class="pdp-key-value">
+
+                                        <div class="key">Назначение платежа:</div>
+                                        <div class="value">{{ document.description }}</div>
+                                    </div>
+                                    <div class="pdp-key-value" v-if="document.outgoing || document.selfExchange">
+                                        <div class="key">Способ верификации:</div>
+                                        <div class="value"><span>{{ document.verificationType}}</span></div>
+                                    </div>
+                                    <div class="pdp-key-value" v-if="document.receiver && !isWireWithDetails">
+                                        <div class="key">Получатель:</div>
+                                        <div class="value">{{ document.receiver }}</div>
+                                    </div>
+
+                                    <div class="pdp-key-value" v-if="document.outgoing && isWireWithDetails">
+                                        <div class="key">Получатель:</div>
+                                        <div class="value">{{ document.corrDetails.corrName}}, {{document.corrDetails.corrBankAccount}},
+                                            {{ document.corrDetails.corrBankName}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </script>
+                <div id="accounts-page">
+                    <h1>
+                        Заголовок</h1>
+
+                    <div class="block" v-if="!loaded">
+                        <div class="block__content">
+
+                            123 тест
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="justify-space-between">
+                <div class="footer__logo">
+                    <div><a href="/finance"><i class="capitalist-icon-capitalist-logo-headed"></i></a></div>
+
+                    <ul class="social-row">
+                        <li><a href="https://www.facebook.com/capitalist.net/" target="_blank"><i class="social-icon"><i class="capitalist-icon-social-facebook"></i></i></a></li>
+
+                        <li><a href="https://vk.com/capitalist_net" target="_blank"><i class="social-icon"><i class="capitalist-icon-social-vk"></i></i></a></li>
+
+                        <li><a href="https://t.me/Capitalist_net" target="_blank"><i class="social-icon"><i class="capitalist-icon-telegram"></i></i></a></li>
+                    </ul>
+
+                </div>
+                <div class="footer__menu">
+                    <span class="menu__title">Платежи</span>
+                    <ul>
+                        <li><a class="link" href="/finance">Мои счета</a></li>
+                        <li><a class="link" href="/cheques">Электронные чеки</a></li>
+                        <li><a class="link" href="/finance/payout">Переводы</a></li>
+                        <li><a class="link" href="/finance/exchange">Конвертация</a></li>
+                        <li><a class="link" href="/finance/deposit">Пополнение счета</a></li>
+                        <li><a class="link" href="/finance/history">История операций</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__menu">
+                    <span class="menu__title">Профиль</span>
+                    <ul>
+                        <li><a class="link" href="/security">Настройки безопасности</a></li>
+                        <li><a class="link" href="/profile">Персональная информация</a></li>
+                        <li><a class="link" href="/fees">Тарифы</a></li>
+                        <li><a class="link" href="/security/notifications">Центр уведомлений</a></li>
+                        <li><a class="link" href="/profile/referral">Реферальная программа</a></li>
+                    </ul>
+                </div>
+                <div class="footer__menu">
+                    <span class="menu__title">Поддержка</span>
+                    <ul>
+                        <li><a class="link" href="/support/issues">Сообщения</a></li>
+                        <li><a class="link" href="/support/archive">Архив сообщений</a></li>
+                        <li><a class="link" href="/contacts">Контакты</a></li>
+                        <li><a class="link" href="/faq">Частые вопросы</a></li>
+                        <li><a class="link" href="/developers/api">API</a></li>
+                        <li><a class="link" href="/useragreement">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="footer__menu">&nbsp;</div> -->
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__copyright">
+                &copy; <a href="http://capitalist.net">Capitalist.net</a>, <span>2019</span>. Все права защищены.
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

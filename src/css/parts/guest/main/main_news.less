@@ -1,0 +1,143 @@
+@import "../../../config/config";
+@import "../../../mixins/mixins";
+
+
+
+.news {
+
+
+
+  &__list {
+    .rlist();
+
+    margin: 0 -15px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-item {
+      display: inline-block;
+      vertical-align: top;
+
+      padding: 0 15px;
+      width: 33%;
+      flex-grow: 0.5;
+      flex-shrink: 0.5;
+
+
+
+      .ulist();
+    }
+  }
+
+  &__more {
+    text-align: center;
+  }
+}
+
+.news__list-item {
+
+
+  .news-item {
+    @innerPaddingBaseSize: 36px;
+
+    &:hover {
+
+      .news-item__title {
+        color: #80bc1c;
+      }
+    }
+
+    &__whole-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      // text-decoration: none;
+      height: 100%;
+      background: @colorWhite;
+      cursor: pointer;
+      cursor: hand;
+      .user-text-selection(none);
+    }
+
+    &__img {
+      display: block;
+      height: 260px;
+      background-size: cover;
+      background-position: center;
+      flex-grow: 0;
+      flex-shrink: 0;
+
+      margin: 0;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+    &__content {
+      padding: @innerPaddingBaseSize @innerPaddingBaseSize+3px @innerPaddingBaseSize @innerPaddingBaseSize+3px;
+      background-color: @colorWhite;
+      margin: 0 0 auto 0;
+      &-inner {
+        //height: 160px;
+      }
+    }
+    &__controls {
+      background: @colorWhite;
+      padding: @innerPaddingBaseSize/3 @innerPaddingBaseSize+3px @innerPaddingBaseSize @innerPaddingBaseSize+3px;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    &__date {
+      display: block;
+      padding-bottom: 11px;
+
+      font:600 12px @mainFontFamily;
+      color:#000000;
+    }
+    &__title {
+      margin-bottom: 26px;
+      font:400 15px/20px @mainFontFamily;
+
+      display: -webkit-box;
+      text-decoration: underline;
+
+      //.textCut(2);
+
+      &-link {
+        border-bottom: none;// 1px solid #27282b;
+        color:#27282b;
+      }
+    }
+    &__text {
+      //max-height: 56px;
+      //overflow: hidden;
+      //.textCut(3);
+    }
+    &__link {
+      font:600 14px/1 @mainFontFamily;
+      color:#27282b;
+      fill:#27282b;
+      &-text {
+        display: inline-block;
+        vertical-align: middle;
+        padding-right: 4px;
+      }
+    }
+
+    &:hover {
+      .news-item__text {
+        color:@indexColorGreen;
+      }
+      .news-item__title-link {
+        color:@indexColorGreen;
+        border-bottom-color:transparent;
+      }
+      .news-item__link {
+        color:@indexColorGreen;
+        fill:@indexColorGreen;
+      }
+    }
+  }
+}
+

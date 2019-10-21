@@ -1,0 +1,155 @@
+@import "../../../config/config";
+@import "../../../mixins/mixins";
+
+.reviews {
+  &__list {
+    position: relative;
+    margin-bottom: 50px;
+
+    margin-left: 100px;
+    margin-right: 100px;
+
+    &:extend(.rlist);
+
+    &:after {
+      content:'';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 1px;
+      background-color: #edf5f9;
+    }
+
+    //@include b(1280) {
+    //  padding: 0 30px;
+    //  &:after {
+    //    right: 30px;
+    //  }
+    //}
+
+    .b(1280, {
+      padding: 0 30px;
+      &:after {
+        right: 30px;
+      }
+    });
+
+    &-item {
+      display: inline-block;
+      vertical-align: top;
+      width: 25%;
+
+      &:extend(.ulist);
+
+      &:after {
+        content:'';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background-color: #edf5f9;
+      }
+      &:first-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+  .slick-arrow {
+    top:129px;
+  }
+  &__more {
+    text-align: center;
+    &-btn {
+      width: 180px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .main-slick-arrows(90px);
+
+
+  .slick-arrow { top: calc(50%); }
+}
+
+.reviews-item {
+  &__logo {
+    height: 160px;
+    padding: 20px 50px;
+
+    border-bottom:1px solid #edf5f9;
+    text-align: center;
+
+    font-size: 0;
+    line-height: 0;
+
+    &:before {
+      content:'';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 100%;
+      max-height:100%;
+    }
+  }
+  &__content {
+    padding: 30px 28px 13px;
+    &-head {
+      padding-bottom: 23px;
+    }
+  }
+}
+
+.reviews-person {
+  &:extend(.rlist);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  &__photo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 74px;
+    height: 74px;
+    margin-right: 23px;
+
+    overflow: hidden;
+    &:extend(.ulist);
+    img {
+      border-radius:50%;
+      width: 100%;
+    }
+  }
+  &__caption {
+    display: inline-block;
+    vertical-align: middle;
+    //width: calc(100% - 97px);
+    &:extend(.ulist);
+  }
+  &__name {
+    padding-bottom: 7px;
+    font:400 18px/1 @mainFontFamily;
+    color:#27282b;
+  }
+  &__position {
+    padding-bottom: 4px;
+    font:300 14px/1 @mainFontFamily;
+    color:#5e6872;
+  }
+  &__company {
+    font:400 15px/1 @mainFontFamily;
+    color:@indexColorGreen;
+  }
+
+
+
+}

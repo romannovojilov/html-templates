@@ -1,0 +1,554 @@
+@import "../mixins/mixins";
+@import "../config/config";
+
+@imagesRoot: "../images/";
+@hPadding: 40px;
+
+.tab-deposit-menu, .tab-payout-menu {
+
+  a.remove-filter-link {
+    color: #5c8f08;
+    text-decoration: none;
+    border-bottom: 1px dashed #5c8f08;
+  }
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .block__content__pd {
+    padding: 20px @hPadding 0 @hPadding;
+  }
+
+  .payout-group {
+    // background: #eaf3f8;
+
+    padding: 10px @hPadding 10px @hPadding;
+
+    &:last-child {
+      padding-bottom: 30px;
+    }
+
+    border-bottom: 1px solid #fff;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .payout-group-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      > div {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      h3, h4 {
+        margin: 0;
+      }
+      h4 {
+        font-size: 80%;
+        color: #5e6872;
+        margin-top: 5px;
+      }
+      .payout-group-toggler {
+        display: inline-block;
+        color: @indexColorGreen;
+        border-bottom: 1px dashed @indexColorGreen;
+        text-decoration: none;
+        position: relative;
+        .payout-group-title {
+          position: relative;
+
+          .chevron {
+            font-size: 10px;
+            color: #fff;
+            background: @capColorLighter;
+            .border-radius(50%);
+            line-height: 10px;
+            height: 19px; width: 19px;
+            padding: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            > span {
+              margin: auto 1px;
+            }
+            position: absolute;
+            right: -25px;
+
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .payout-group-body {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      margin-left: -20px;
+      margin-right: -20px;
+      .payout-group-item {
+
+        width: 25%;
+        //margin: 10px auto 10px 0;
+        flex-grow: 0;
+        flex-shrink: 0.5;
+        text-align: center;
+        padding: 10px 20px 10px 20px;
+
+        .payout-item-logo {
+          display: block;
+          .border-radius(4px);
+          background: #fff;
+          border: 1px solid #e0eaf0;
+          padding: 20px 10px 20px 10px;
+        }
+        .payout-item-title {
+          margin-top: 0.7em;
+          color: #90959a;
+        }
+      }
+    }
+
+    .payout-logo {
+      height: 40px;
+      margin: 5px;
+
+      .background-contain('@{imagesRoot}/icons/safe.png', center);
+
+      &.payout-logo- {
+        &beeline {
+          background-image: url('@{imagesRoot}/icons/payout/beeline.png');
+        }
+        &mts {
+          background-image: url('@{imagesRoot}/icons/payout/mts.png');
+        }
+        &tele2 {
+          background-image: url('@{imagesRoot}/icons/payout/tele2.png');
+        }
+        &megafon {
+          background-image: url('@{imagesRoot}/icons/payout/megaphone.png');
+        }
+        &wire {
+          background-image: url('@{imagesRoot}/icons/payout/wire.png');
+        }
+        &alfabank-cashin {
+          background-image: url('@{imagesRoot}/icons/payout/alfabank.png');
+        }
+        &capitalist {
+          background-image: url('@{imagesRoot}/icons/payout/capitalist.png');
+        }
+        &cheque {
+          background-image: url('@{imagesRoot}/icons/payout/capitalist-cheque.png');
+        }
+        &capitalistcard {
+          background-image: url('@{imagesRoot}/icons/payout/cap_card.png');
+        }
+        &yandex-money {
+          background-image: url('@{imagesRoot}/icons/payout/yandex-money.png');
+        }
+        &paxum {
+          background-image: url('@{imagesRoot}/icons/payout/paxum.png');
+        }
+        &okpay {
+          background-image: url('@{imagesRoot}/icons/payout/okpay.png');
+        }
+        &epese {
+          background-image: url('@{imagesRoot}/icons/payout/epese.png');
+        }
+        &mass-payment {
+          background-image: url('@{imagesRoot}/icons/payout/masspayments.png');
+        }
+        &bitcoin {
+          background-image: url('@{imagesRoot}/icons/payout/bitcoin.png');
+        }
+        &qiwi {
+          background-image: url('@{imagesRoot}/icons/payout/qiwi.png');
+        }
+        &webmoney {
+          background-image: url('@{imagesRoot}/icons/payout/webmoney.png');
+        }
+        &wex-cheque {
+          background-image: url('@{imagesRoot}/icons/payout/wex.png');
+        }
+        &livecoin-cheque {
+          background-image: url('@{imagesRoot}/icons/payout/livecoin-cheque.png');
+        }
+        &exmo-cheque {
+          background-image: url('@{imagesRoot}/icons/payout/exmo.png');
+        }
+        &yobit-cheque {
+          background-image: url('@{imagesRoot}/icons/payout/yobit.png');
+        }
+        &bitcoin {
+          background-image: url('@{imagesRoot}/icons/payout/bitcoin.png');
+        }
+        &partners {
+          background-image: url('@{imagesRoot}/icons/payout/partners.png');
+        }
+        &services {
+          background-image: url('@{imagesRoot}/icons/payout/services.png');
+        }
+        &cash {
+          background-image: url('@{imagesRoot}/icons/payout/agents.png');
+        }
+        &rucards {
+          background-image: url('@{imagesRoot}/icons/payout/visa_mastercard_ru.png');
+        }
+        &uacards {
+          background-image: url('@{imagesRoot}/icons/payout/visa_mastercard_ua.png');
+        }
+        &cards {
+          background-image: url('@{imagesRoot}/icons/payout/visamastercard.png');
+        }
+        &worldcards {
+          background-image: url('@{imagesRoot}/icons/payout/visamastercard.png');
+        }
+      }
+    }
+
+    .payout-group-icon {
+
+      margin: 0 20px 0 0;
+      width: 46px;
+      height: 46px;
+      background: #80bd1c;
+      .border-radius(50%);
+
+      display: flex;
+
+      div {
+        margin: auto;
+        line-height: 1;
+      }
+
+      @smallIconSize: 24px;
+      @mdIconSize: 26px;
+      @fullIconSize: 46px;
+
+      &- {
+        &star {
+          background: url('@{imagesRoot}/icons/star.svg') no-repeat center top;
+          width: @smallIconSize;
+          height: @smallIconSize;
+        }
+        &bank {
+          width: @mdIconSize;
+          height: @mdIconSize;
+          .background-contain('@{imagesRoot}/icons/bank.png', center);
+        }
+        &other {
+          width: @mdIconSize;
+          height: @mdIconSize;
+          .background-contain('@{imagesRoot}/icons/masspay.png', center);
+
+        }
+        &mobile {
+          width: @mdIconSize;
+          height: @mdIconSize;
+          .background-contain('@{imagesRoot}/icons/mobile.png', center);
+
+        }
+        &online-wallets {
+          width: @mdIconSize;
+          height: @mdIconSize;
+          .background-contain('@{imagesRoot}/icons/wallet-online.png', center);
+        }
+
+        &crypto {
+          width: @fullIconSize;
+          height: @fullIconSize;
+          .background-contain('@{imagesRoot}/icons/handshake.png', center);
+        }
+
+        &bank-all {
+          width: @mdIconSize;
+          height: @mdIconSize;
+          .background-contain('@{imagesRoot}/icons/bank-cards.png', center);
+        }
+
+      }
+    }
+  }
+}
+
+
+.block-layer {
+  .white-circle {
+    .border-radius(10px);
+  }
+}
+
+.vendor-icon- {
+  &capitalist {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/capitalist.png');
+      // background-image: url(../images/icons/vendor/capitalist-head.png);
+    }
+  }
+  &yandexmoney {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/yandex.png');
+    }
+  }
+  &wire {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/wire.png');
+    }
+  }
+  &rucards {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/rucards.png');
+    }
+  }
+  &uacards {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/uacards.png');
+    }
+  }
+  &livecoin {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/livecoin.png');
+    }
+  }
+  &exmo {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/exmo.png');
+    }
+  }
+
+  &yobit {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/yobit.png');
+    }
+  }
+  &mts {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/mts.png');
+    }
+  }
+  &beeline {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/beeline.png');
+    }
+  }
+  &megafon {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/megafon.png');
+    }
+  }
+  &tele2 {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/tele2.png');
+    }
+  }
+  &visa {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/visa.png');
+    }
+  }
+  &worldcards {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/credit-card-world.png');
+    }
+  }
+  &wex {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/wex.png');
+    }
+  }
+  &capitalist-cheque {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/capitalist-cheque.png');
+    }
+  }
+  &mass {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/masspayments.png');
+    }
+  }
+  &partners {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/agents.png');
+    }
+  }
+  &services {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/payout/services.png');
+    }
+  }
+  &agents {
+    &:before {
+      background-image: url('@{imagesRoot}/icons/vendor/agents.png');
+    }
+  }
+
+}
+
+.tarnsfer_form, .step_form {
+  .input-group input[type=file] + label .input-addon {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: auto;
+    max-width: 150px;
+  }
+  .input-group {
+    .input-addon {
+      &.input-addon-currency {
+        background: #90959a;
+        cursor: default;
+      }
+    }
+  }
+
+  .hint-panel-question-icon {
+    color: #5c8f08;
+    line-height: 1.4em;
+  }
+
+  .toggable-hint-panel {
+    .toggable-hint-panel-toggle-link {
+      color: #777;
+      font-size: 85%;
+      border-bottom: 1px dashed #777;
+    }
+  }
+
+  .capitalist-amount-hint, .payout-hint-panel {
+    margin-top: 10px;
+    border-top: @formHintsTopGreenBorder;
+    font-size: 90%;
+
+    .panel-heading {
+      padding-bottom: 0;
+    }
+
+    h4 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: @capLinksColor;
+      text-decoration: underline;
+    }
+    ul {
+      margin: 0.5em 0;
+      li {
+        //margin-left: 15px;
+        margin: 5px 0 5px 15px;
+        list-style-type: disc;
+      }
+    }
+  }
+}
+
+
+.mass-payment-info-block {
+  .payment-code {
+    background: @alertsWarningBackgroundColor;
+    border-color: @alertsWarningBorderColor;
+  }
+}
+
+.mass-payment-has-errors {
+  margin: 25px;
+  .alert {
+    margin: 0;
+  }
+}
+
+
+.mass-payment-total-dark {
+  .flex-display(flex);
+  .flex-direction(row);
+  .justify-content(flex-start);
+  > div:first-child {
+    width: 20%;
+  }
+
+  .mass-payment-total, .mass-send-sum {
+    padding: 25px;
+  }
+  .mass-payment-total {
+    margin-right: 30px;
+  }
+}
+
+.mass-payment-confirm-wrap {
+  overflow: visible;
+  > table {
+    width: 100%;
+    td, th {
+      max-width: inherit;
+      &:first-child {
+        padding-left: 25px;
+      }
+      &:last-child {
+        padding-right: 25px;
+      }
+    }
+  }
+}
+
+#masspayout {
+  .transfer-preview {
+    .form-step-heading-wrap {
+      padding: 25px 40px 0;
+    }
+    .form-step {
+      padding: 0;
+    }
+  }
+}
+
+.panel {
+  &.panel_no-shadow {
+    box-shadow: none;
+  }
+}
+
+.payout-payways-dropdown {
+  > button {
+    &:first-child {
+      .flex-display(flex);
+      .flex-direction(row);
+      .align-items(center);
+    }
+  }
+  .dropdown-menu {
+    li {
+      a {
+        .flex-display(flex);
+        .flex-direction(row);
+        .align-items(center);
+
+        white-space: normal;
+      }
+    }
+  }
+}
+
+.dropdown {
+  button.form-control {
+    overflow: hidden;
+  }
+  .dropdown-menu > li > a {
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+    white-space: normal;
+  }
+}

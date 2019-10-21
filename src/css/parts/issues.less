@@ -1,0 +1,62 @@
+@import "../config/config";
+
+.issues-main__table {
+  .glyphicon {
+    font-size: 75%;
+    margin-left: 3px;
+    line-height: 1em;
+  }
+  .issue-label .label {
+    font-size: 100%;
+  }
+  a.issue-link-colored {
+    &:hover {
+      color: @capColor;
+      text-decoration: underline;
+    }
+  }
+}
+
+#issues-page {
+  a.archive-link {
+    color: @capColor;
+    margin-top: 0.5em;
+  }
+}
+
+.r-messeges-section .r-messeges-wrap {
+  .one-messege {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    .ava {
+      margin: 0;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    .r-messege-text {
+      width: 100%;
+      flex-shrink: 1;
+    }
+  }
+}
+
+.r-write-messege-wrap .interlocutor-wrap .user-name {
+  a, div, span {
+    color: #5c8f08;
+    font-size: 18px;
+    font-family: 'Proxima Nova Sd';
+  }
+}
+
+.r-messeges-section .r-messeges-wrap .one-messege .r-messege-text .user-name {
+  .user {
+    color: #27282b;
+  }
+  span, div {
+    color: #5c8f08;
+    font-size: 18px;
+    font-family: 'Proxima Nova Sd';
+  }
+}
+

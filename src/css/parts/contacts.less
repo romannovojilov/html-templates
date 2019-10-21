@@ -1,0 +1,135 @@
+@import "../config/config";
+@import "../mixins/mixins";
+
+@imagesRoot: '../images/';
+
+.contacts-page-logged {
+  .block__content {
+    h3:first-child {
+      margin-top: 0;
+    }
+    ul.list-disc li {
+      list-style: disc;
+      margin-left: 3ex;
+    }
+  }
+
+
+  .left-subblock {
+    background: #e6e7ef;
+    padding: 10px 40px;
+    //.border-radius(5px);
+    border: 1px solid #d6dee6;
+  }
+
+  .support-shift {
+    border: 1px solid #d8e8fa;
+    .border-radius(4px);
+    background: rgba(255, 255, 255, 0.9);
+
+    padding: 20px 30px 40px 30px;
+
+    legend {
+      background: #fff;
+
+      margin: 0 5px 0 0;
+      padding: 0 15px;
+      font-size: 103%;
+      font-weight: bolder;
+      display: inline-block;
+      width: auto;;
+      border: none;
+    }
+
+    .shift-row {
+      .flex-display();
+      .flex-direction(row);
+      .align-items(center);
+      justify-items: center; // WHAT
+      margin-top: 2em;
+
+      .shift-image {
+        background: url('@{imagesRoot}/external/contacts/support-shift.png') no-repeat top left;
+        &.shift-image-working-night {
+          background-position: left -178px;
+        }
+        &.shift-image-weekend {
+          background-position: left bottom;
+        }
+        width: 386px;
+        height: 37px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin: 0 0 auto 0;
+      }
+      .shift-ndash {
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin: 1px 20px auto 30px;
+      }
+      .shift-text {
+        flex-shrink: 1;
+        flex-grow: 0.5;
+        margin: 1px auto auto 5px;
+      }
+
+      .shift-time {
+        position: relative;
+        margin: -1em auto 0 55px;
+        strong {
+          color: #000;
+        }
+        color: #aaa;
+      }
+    }
+  }
+
+  .contact-list {
+    h3 {
+      font-size: 125%;
+      margin: 0.5em 0 15px 0;
+    }
+    font-size: 110%;
+    .circle-icon {
+      .border-radius(50%);
+      width: 50px;
+      height: 50px;
+      background: @colorWhite;
+      text-align: center;
+      vertical-align: middle;
+      display: inline-flex;
+
+      font-size: 20px;
+
+      margin-right: 25px;
+    }
+    li {
+      border-bottom: 1px solid #d6dee6;
+      padding: 20px 0;
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .comment {
+        font-size: 80%;
+        color: #666;
+        margin: 5px 30px 0 80px;
+      }
+    }
+    a {
+      text-decoration: underline;
+    }
+    img, div.circle-icon div {
+      color: @indexColorGreen;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 1em;
+      text-align: center;
+      margin: auto;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,188 @@
+@import "../../config/config";
+@import "../../mixins/mixins";
+
+
+.icon-logo {
+  width: 158px;
+  height: 44px;
+}
+
+.icon-logo-sm {
+  width: 138px;
+  height: 39px;
+}
+
+.icon-arrow {
+  width: 19px;
+  height: 13px;
+}
+
+.icon-arrow-md {
+  width: 24px;
+  height: 16px;
+}
+
+.icon-arrow-lg {
+  width: 26px;
+  height: 18px;
+}
+
+.guest-page {
+  &.dark-header-page {
+
+    .header__nav {
+      padding: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    header.header {
+      background-size: cover;
+      background-position: center top;
+
+      height: 100vh; // 700px;
+
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .intro__inner {
+        flex-grow: 0.9;
+        flex-shrink: 1;
+        position: relative;
+        //height: 100%;
+        margin: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .intro__content {
+
+          text-align: center;
+          .intro__content-inner {
+            max-width: 690px;
+            margin: auto;
+          }
+        }
+
+        .intro__title {
+          padding-bottom: 30px;
+          font: 600 70px/60px 'Proxima Nova Rg', sans-serif, "Verdana";
+          color: #fff;
+          text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+        .intro__subtitle {
+          padding-bottom: 48px;
+          font: 400 20px/26px 'Proxima Nova Rg', sans-serif, "Verdana";
+          color: #fff;
+          text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+        .intro__links-item {
+          display: inline-block;
+          vertical-align: top;
+          padding: 0 7px;
+
+          .btn {
+            [class*="icon-"] {
+              display: inline-block;
+              vertical-align: middle;
+            }
+            &.btn-green {
+              &.btn-green-success {
+                background: rgb(128, 188, 28);
+              }
+              &:hover {
+                background-color: @capBtnSuccessHoverBackgroundColor;
+              }
+              padding: 12px 26px 13px 26px;
+              .border-radius(@btnRadius);
+              border: 1px solid #80bc1c;
+
+              background: rgba(0, 0, 0, 0.3); // rgba(128, 188, 28, 0.1);
+
+
+              font: 600 16px 'Proxima Nova Rg', sans-serif, "Verdana";
+              color: #fff;
+              fill: #fff;
+
+              &--lg {
+                font-size: 20px;
+              }
+            }
+            .btn__icon {
+              margin-left: 5px;
+            }
+            .btn__text {
+              display: inline-block;
+              vertical-align: middle; }
+            .btn__icon {
+              margin-left: 5px; }
+          }
+        }
+      }
+
+    }
+
+    .page-header-cover {
+      //height: 100vh;
+      .page-header-cover-img {
+        //height: 100%;
+      }
+    }
+
+    ul.nav__guest {
+      li {
+        &.menu-lang {
+          .dropdown {
+            button.dropdown-toggle {
+              border-color: #fff;
+              color: #fff;
+              .caret, &:hover .caret {
+                color: #fff;
+              }
+            }
+
+          }
+
+        }
+        .login-button {
+          &:hover {
+            color: white;
+            .login-button-title {
+              color: white;
+            }
+          }
+          .login-button-title {
+            color: @capColorLighter;
+          }
+        }
+        &.menu-link {
+
+          &.sel, &:hover {
+            a {
+              border-bottom: 3px solid @capColorLighter;
+              line-height: 74px;
+            }
+          }
+          &:hover {
+            a {
+              border-bottom: 3px solid @capColorLighter;
+            }
+          }
+          a {
+            border-top: 3px solid rgba(0, 0, 0, 0);
+            border-bottom: 3px solid rgba(0, 0, 0, 0);
+
+            color: #fff;
+
+            display: inline-block;
+            line-height: 74px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

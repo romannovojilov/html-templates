@@ -1,0 +1,18 @@
+.logo-snowflake-cover {
+  display: none;
+}
+.ny-2019 .logo-wrapper {
+  position: relative;
+}
+.ny-2019 .logo-snowflake-cover {
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  background-image: url(../images/external/2019-ny/logo-snowflakes.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  width: 152px;
+  height: 62px;
+}

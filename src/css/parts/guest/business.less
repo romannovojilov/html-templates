@@ -1,0 +1,142 @@
+@import "../../config/config";
+@import "../../mixins/mixins";
+
+.business-page-guest-body {
+  main.main {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+.business-page-guest {
+
+  @h2Size: 28px;
+  @h3Size: 18px;
+
+  .block-1-2 {
+    background: #fff;
+    padding: 1px 0 50px 0;
+    margin: 0;
+
+  }
+
+  .block-1 {
+    margin: 60px auto;
+    width: 80%;
+    h2 {
+      font-size: @h2Size;
+    }
+
+    h3.subtitle {
+      margin: 2em auto 1em auto;
+      line-height: 1.8em;
+      width: 80%;
+    }
+  }
+
+  .block-2 {
+
+    ul.advantages-list {
+
+      margin-top: 35px;
+      font-size: 18px;
+      list-style-type: none;
+      margin-left: 10%;
+      li {
+
+        .flex-display(flex);
+        .flex-direction(row);
+        .flex-wrap(nowrap);
+        .justify-content(flex-start);
+        .align-items(flex-start);
+
+
+        > div {
+          margin: auto 0 auto 0;
+          //&:last-child {
+          //  margin-top: 0.4em;
+          //}
+        }
+        .number {
+          flex-shrink: 0;
+          font-weight: bolder;
+          background: @indexColorGreen; // 80bd1c
+          color: #fff;
+          display: inline-block;
+          padding: 0.6em 0;
+          text-align: center;
+          width: 2.2em;
+          height: 2.2em;
+          line-height: 1em;
+          .border-radius(100%);
+          margin-right: 20px;
+        }
+
+        padding: 0 0 1em 0;
+      }
+    }
+
+    .block-logos {
+      background: #fff;
+      border: 1px solid #e2eaef;
+      padding: 40px 0;
+      text-align: center;
+      .border-radius(8px);
+
+      .block-logos-separated {
+        width: 80%;
+        margin: 0 10%;
+        td {
+          padding: 22px 15px;
+          text-align: center;
+          vertical-align: middle;
+          width: 50%;
+        }
+      }
+    }
+  }
+
+
+
+  .block-3 {
+
+    h2 {
+      font-size: @h2Size;
+    }
+
+    padding: 50px 0;
+
+    .info-titles {
+      margin-top: 30px;
+      font-size: 117%;
+      color: #5e6872;
+
+      .flex-display();
+      .flex-direction(row);
+      .flex-wrap(nowrap);
+      .justify-content(space-between);
+      .align-items(flex-start);
+
+
+      > div {
+        margin: auto;
+      }
+      .title {
+        text-align: center;
+        flex-grow: 0.5;
+        flex-shrink: 1;
+        width: 20%;
+
+      }
+      .title-sep {
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 10%;
+        content: ' ';
+      }
+    }
+
+  }
+
+
+}

@@ -1,0 +1,189 @@
+@import "../../config/config";
+@import "../../mixins/mixins";
+
+@imagesRoot: '../images/';
+
+.individuals-page-guest-body {
+
+  main.main {
+    padding-bottom: 0;
+  }
+}
+.individuals-page-guest {
+
+  @h2Size: 28px;
+  @h3Size: 18px;
+
+
+  .block-1 {
+    margin: 30px auto 60px auto;
+
+    h2 {
+      font-size: @h2Size;
+    }
+
+    h3.subtitle {
+      margin: 2em auto 1em auto;
+      line-height: 1.8em;
+      width: 50%;
+    }
+  }
+
+  .block-2-wrap {
+    background: #fff;
+    padding: 40px 0 0 0;
+
+    .block-2 {
+      h2 {
+        font-size: @h2Size;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e7e7e7;
+        margin-top: 60px;
+      }
+
+      .trow {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        > div {
+          width: 50%;
+          margin: 0 auto;
+        }
+        .column-info {
+          width: 40%;
+        }
+      }
+
+      .info {
+        font-size: @h3Size;
+        background: #f4f4f4;
+        padding: 70px;
+        line-height: 1.5em;
+        margin: 70px 40px 0 auto;
+        a {
+          color: @capColor;
+        }
+      }
+
+
+    }
+  }
+
+
+  .block-3-wrap {
+    background: #fff;
+    padding: 10px 0 60px 0;
+
+    .block-3 {
+      h2 {
+        font-size: @h2Size;
+      }
+
+      ul.systems {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        list-style-type: none;
+        li {
+          display: block;
+          margin: 10px auto;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .trow {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        > div {
+          width: 50%;
+          margin: 0 auto;
+        }
+        .column-info {
+          width: 40%;
+          margin-right:0;
+        }
+        .column-hand {
+          margin-left: 0;
+        }
+      }
+
+      .info {
+        font-size: @h3Size;
+        background: #f4f4f4;
+        padding: 70px;
+        line-height: 1.5em;
+        margin: 0 0 auto 60px;
+        a {
+          color: @capColor;
+        }
+      }
+
+
+    }
+  }
+
+
+  .block-4-wrap {
+    background: #f5f5f5;
+
+    padding: 30px 0 0 0;
+
+    .content {
+      overflow: hidden;
+    }
+
+    .scheme {
+      position: relative;
+      margin: 80px auto 0 10%;
+      height: 769px;
+      width: 1177px;
+      background: url('@{imagesRoot}/external/individuals/individuals-hands.png') no-repeat;
+      background-position: top left;
+
+      > div {
+        position: absolute;
+        width: 145px;
+        text-align: center;
+        z-index: 3;
+        font-weight: bolder;
+        top: 200px;
+      }
+      .friends {
+        top: 200px;
+        left: 105px;
+      }
+      .colleagues {
+        position: absolute;
+        left: 410px;
+      }
+      .clients {
+        position: absolute;
+        left: 705px;
+      }
+    }
+
+    h2 {
+      font-size: @h2Size;
+    }
+
+    .subtitle {
+
+    }
+  }
+}

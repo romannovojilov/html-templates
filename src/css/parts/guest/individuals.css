@@ -1,0 +1,332 @@
+/*
+
+//----------------------------------------------------//
+// Mixins & Includes                                  //
+//----------------------------------------------------//
+@mixin notext {
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.centered	{
+	display: table;
+	width: 100%;
+	height: 100%;
+	> * {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+// PLACEHOLDER MIXIN
+@mixin placeholderColor($input-text-color) {
+	&::-webkit-input-placeholder {color: $input-text-color;}
+	&:-moz-placeholder {color: $input-text-color; opacity: 1;}
+	&::-moz-placeholder {color: $input-text-color; opacity: 1;}
+	&:-ms-input-placeholder {color: $input-text-color;}
+	&:focus:-moz-placeholder {color:transparent; opacity: 1;}
+	&:focus::-moz-placeholder {color:transparent; opacity: 1;}
+	&:focus::-webkit-input-placeholder {color:transparent;}
+	&:focus:-ms-input-placeholder {color:transparent;}
+	&:focus::placeholder {color:transparent;}
+}
+
+@mixin clearfix {
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}
+
+// Clear select without default button
+@mixin clearSelect {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+//elements get appended with "__" and the $name
+@mixin e($name) {
+	@at-root   #{&}__#{$name} {
+		@content;
+	}
+}
+
+//modifiers get appended with "--" and the $name
+@mixin m($name) {
+	@at-root   #{&}--#{$name} {
+		@content;
+	}
+}
+
+ @mixin b($point) {
+	@if $point == desktop {
+		@media (max-width: 1366px) and (min-width:1024px) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (max-width: 1000px) { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-width: 37.5em)  { @content ; }
+	}
+	@else if $point == mobile {
+		@media (max-width: 767px)  { @content ; }
+	}
+	@else if $point == mobile3x {
+		@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx), only screen and (min-resolution: 350dpi) {
+			@content ;
+		}
+	}
+	@else {
+		@media (max-width: $point + 'px')  { @content ; }
+	}
+}
+
+@mixin ie() {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  	@content ;
+	}
+}
+
+@mixin before-img($width, $height) {
+	content: '';
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+}
+
+//----------------------------------------------------//
+// REM FONT_SIZE WITH FALLBACK 												//
+//----------------------------------------------------//
+// USAGE:
+// p {
+//   @include font-size(14px)
+// }
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+@mixin gradient($top, $bottom) {
+   background: $top;
+   background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+   background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom} ',GradientType=0 );
+}
+
+
+@mixin textCut($col) {
+  display: -webkit-box;
+  -webkit-line-clamp: $col;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+.transition {
+	transition: all .2s ease-in-out;
+	&:hover {
+		transition: all .2s ease-in-out;
+	}
+}
+
+.rlist {
+	font-size: 0;
+	line-height: 0;
+}
+.ulist {
+	font-size: $mainFontSize;
+	line-height: $mainFontHeight;
+}
+
+ */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+.transition:hover {
+  transition: all 0.2s ease-in-out;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.ulist {
+  font-size: 14px;
+  line-height: 1.43;
+}
+.rlist {
+  font-size: 0;
+  line-height: 0;
+}
+.individuals-page-guest-body main.main {
+  padding-bottom: 0;
+}
+.individuals-page-guest .block-1 {
+  margin: 30px auto 60px auto;
+}
+.individuals-page-guest .block-1 h2 {
+  font-size: 28px;
+}
+.individuals-page-guest .block-1 h3.subtitle {
+  margin: 2em auto 1em auto;
+  line-height: 1.8em;
+  width: 50%;
+}
+.individuals-page-guest .block-2-wrap {
+  background: #fff;
+  padding: 40px 0 0 0;
+}
+.individuals-page-guest .block-2-wrap .block-2 h2 {
+  font-size: 28px;
+}
+.individuals-page-guest .block-2-wrap .block-2 hr {
+  border: none;
+  border-top: 1px solid #e7e7e7;
+  margin-top: 60px;
+}
+.individuals-page-guest .block-2-wrap .block-2 .trow {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.individuals-page-guest .block-2-wrap .block-2 .trow > div {
+  width: 50%;
+  margin: 0 auto;
+}
+.individuals-page-guest .block-2-wrap .block-2 .trow .column-info {
+  width: 40%;
+}
+.individuals-page-guest .block-2-wrap .block-2 .info {
+  font-size: 18px;
+  background: #f4f4f4;
+  padding: 70px;
+  line-height: 1.5em;
+  margin: 70px 40px 0 auto;
+}
+.individuals-page-guest .block-2-wrap .block-2 .info a {
+  color: #5c8f08;
+}
+.individuals-page-guest .block-3-wrap {
+  background: #fff;
+  padding: 10px 0 60px 0;
+}
+.individuals-page-guest .block-3-wrap .block-3 h2 {
+  font-size: 28px;
+}
+.individuals-page-guest .block-3-wrap .block-3 ul.systems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  list-style-type: none;
+}
+.individuals-page-guest .block-3-wrap .block-3 ul.systems li {
+  display: block;
+  margin: 10px auto;
+}
+.individuals-page-guest .block-3-wrap .block-3 ul.systems li:first-child {
+  margin-left: 0;
+}
+.individuals-page-guest .block-3-wrap .block-3 ul.systems li:last-child {
+  margin-right: 0;
+}
+.individuals-page-guest .block-3-wrap .block-3 .trow {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.individuals-page-guest .block-3-wrap .block-3 .trow > div {
+  width: 50%;
+  margin: 0 auto;
+}
+.individuals-page-guest .block-3-wrap .block-3 .trow .column-info {
+  width: 40%;
+  margin-right: 0;
+}
+.individuals-page-guest .block-3-wrap .block-3 .trow .column-hand {
+  margin-left: 0;
+}
+.individuals-page-guest .block-3-wrap .block-3 .info {
+  font-size: 18px;
+  background: #f4f4f4;
+  padding: 70px;
+  line-height: 1.5em;
+  margin: 0 0 auto 60px;
+}
+.individuals-page-guest .block-3-wrap .block-3 .info a {
+  color: #5c8f08;
+}
+.individuals-page-guest .block-4-wrap {
+  background: #f5f5f5;
+  padding: 30px 0 0 0;
+}
+.individuals-page-guest .block-4-wrap .content {
+  overflow: hidden;
+}
+.individuals-page-guest .block-4-wrap .scheme {
+  position: relative;
+  margin: 80px auto 0 10%;
+  height: 769px;
+  width: 1177px;
+  background: url(../images/external/individuals/individuals-hands.png) no-repeat;
+  background-position: top left;
+}
+.individuals-page-guest .block-4-wrap .scheme > div {
+  position: absolute;
+  width: 145px;
+  text-align: center;
+  z-index: 3;
+  font-weight: bolder;
+  top: 200px;
+}
+.individuals-page-guest .block-4-wrap .scheme .friends {
+  top: 200px;
+  left: 105px;
+}
+.individuals-page-guest .block-4-wrap .scheme .colleagues {
+  position: absolute;
+  left: 410px;
+}
+.individuals-page-guest .block-4-wrap .scheme .clients {
+  position: absolute;
+  left: 705px;
+}
+.individuals-page-guest .block-4-wrap h2 {
+  font-size: 28px;
+}

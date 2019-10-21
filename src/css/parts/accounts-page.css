@@ -1,0 +1,380 @@
+/*
+
+//----------------------------------------------------//
+// Mixins & Includes                                  //
+//----------------------------------------------------//
+@mixin notext {
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.centered	{
+	display: table;
+	width: 100%;
+	height: 100%;
+	> * {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+// PLACEHOLDER MIXIN
+@mixin placeholderColor($input-text-color) {
+	&::-webkit-input-placeholder {color: $input-text-color;}
+	&:-moz-placeholder {color: $input-text-color; opacity: 1;}
+	&::-moz-placeholder {color: $input-text-color; opacity: 1;}
+	&:-ms-input-placeholder {color: $input-text-color;}
+	&:focus:-moz-placeholder {color:transparent; opacity: 1;}
+	&:focus::-moz-placeholder {color:transparent; opacity: 1;}
+	&:focus::-webkit-input-placeholder {color:transparent;}
+	&:focus:-ms-input-placeholder {color:transparent;}
+	&:focus::placeholder {color:transparent;}
+}
+
+@mixin clearfix {
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}
+
+// Clear select without default button
+@mixin clearSelect {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+//elements get appended with "__" and the $name
+@mixin e($name) {
+	@at-root   #{&}__#{$name} {
+		@content;
+	}
+}
+
+//modifiers get appended with "--" and the $name
+@mixin m($name) {
+	@at-root   #{&}--#{$name} {
+		@content;
+	}
+}
+
+ @mixin b($point) {
+	@if $point == desktop {
+		@media (max-width: 1366px) and (min-width:1024px) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (max-width: 1000px) { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-width: 37.5em)  { @content ; }
+	}
+	@else if $point == mobile {
+		@media (max-width: 767px)  { @content ; }
+	}
+	@else if $point == mobile3x {
+		@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx), only screen and (min-resolution: 350dpi) {
+			@content ;
+		}
+	}
+	@else {
+		@media (max-width: $point + 'px')  { @content ; }
+	}
+}
+
+@mixin ie() {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  	@content ;
+	}
+}
+
+@mixin before-img($width, $height) {
+	content: '';
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+}
+
+//----------------------------------------------------//
+// REM FONT_SIZE WITH FALLBACK 												//
+//----------------------------------------------------//
+// USAGE:
+// p {
+//   @include font-size(14px)
+// }
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+@mixin gradient($top, $bottom) {
+   background: $top;
+   background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+   background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom} ',GradientType=0 );
+}
+
+
+@mixin textCut($col) {
+  display: -webkit-box;
+  -webkit-line-clamp: $col;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+.transition {
+	transition: all .2s ease-in-out;
+	&:hover {
+		transition: all .2s ease-in-out;
+	}
+}
+
+.rlist {
+	font-size: 0;
+	line-height: 0;
+}
+.ulist {
+	font-size: $mainFontSize;
+	line-height: $mainFontHeight;
+}
+
+ */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+.transition:hover {
+  transition: all 0.2s ease-in-out;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.ulist {
+  font-size: 14px;
+  line-height: 1.43;
+}
+.rlist {
+  font-size: 0;
+  line-height: 0;
+}
+#accounts-page .tile__header {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#accounts-page .cap-icon-summary-btg {
+  font-family: 'Proxima Nova Rg', sans-serif, "Verdana" !important;
+  font-weight: bold;
+  font-size: 15px;
+}
+#accounts-page .cap-icon-summary-btg:before {
+  font-family: 'Proxima Nova Rg', sans-serif, "Verdana" !important;
+  font-weight: bold;
+  font-size: 15px;
+  content: 'BG';
+}
+#accounts-page .cap-icon-summary-bcc {
+  font-family: 'Proxima Nova Rg', sans-serif, "Verdana" !important;
+  font-weight: bold;
+  font-size: 15px;
+}
+#accounts-page .cap-icon-summary-bcc:before {
+  font-family: 'Proxima Nova Rg', sans-serif, "Verdana" !important;
+  font-weight: bold;
+  font-size: 15px;
+  content: 'BC';
+}
+#accounts-page .last-batches-list {
+  border-top: 1px solid #eaebf4;
+}
+#accounts-page .last-batches-list .table td {
+  word-wrap: normal;
+}
+#accounts-page .last-batches-list .table a {
+  color: #5c8f08;
+  text-decoration: none;
+}
+#accounts-page .last-batches-list .table a:hover {
+  text-decoration: underline;
+}
+.alert-show-discounts {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+.alert-show-discounts .discounts-text {
+  padding-right: 15px;
+}
+.alert-show-discounts > div {
+  margin: auto 0;
+}
+.alert-show-discounts a.btn {
+  color: #fff;
+  text-decoration: none;
+}
+.alert-show-discounts .discounts-dropdown .dropdown-menu {
+  width: 100%;
+}
+.alert-show-discounts .discounts-dropdown .dropdown-menu li {
+  padding: 5px 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.alert-show-discounts .discounts-dropdown .dropdown-menu li div:last-child {
+  margin-left: 15px;
+}
+.bill__table.table .bill__control {
+  width: 120px;
+}
+.bitcoin-incoming-transactions {
+  font-size: 90%;
+  color: #444;
+  padding-top: 5px;
+}
+.bitcoin-incoming-transactions .bitcoin-incoming-transaction {
+  line-height: 1.4em;
+  padding-top: 8px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.bitcoin-incoming-transactions .bitcoin-incoming-transaction .bit-icon {
+  width: 15px;
+  margin: 0 10px 0 0;
+}
+.bitcoin-incoming-transactions .bitcoin-incoming-transaction .bit-amount {
+  margin: 0 30px 0 0;
+}
+.bitcoin-incoming-transactions .bitcoin-incoming-transaction .bit-confirmations {
+  text-align: right;
+  margin: 0 auto 0 0;
+}
+.bitcoin-incoming-transactions .bitcoin-incoming-transaction a {
+  color: #5c8f08;
+  text-decoration: none;
+}
+.bitcoin-incoming-transactions .bitcoin-incoming-transaction a:hover {
+  text-decoration: underline;
+}
+.bitcoin-wallets-list .table tr td {
+  vertical-align: top;
+}
+.bitcoin-wallets-list .tile__header {
+  padding-top: 0;
+}
+.bitcoin-wallets-list .btn-link {
+  text-decoration: none;
+}
+.bitcoin-wallets-list .btn-link:hover span {
+  border-bottom-style: solid;
+}
+.bitcoin-wallets-list .btn-link span {
+  color: #5c8f08;
+  border-bottom: 1px dashed #5c8f08;
+}
+.bitcoin-wallets-list .alert.alert-warning {
+  margin-top: 20px;
+}
+.bitcoin-wallets-list a.bitcoin-wallet-name {
+  color: #5c8f08;
+  border-bottom-color: #5c8f08;
+}
+.bitcoin-wallets-list .table {
+  font-size: 94%;
+}
+.bitcoin-wallets-list .table tr td {
+  border-top-color: #eaebf4;
+  padding-left: 0;
+  padding-right: 20px;
+}
+.bitcoin-wallets-list .table tr td:last-child {
+  padding-right: 0;
+}
+.bitcoin-wallets-list .bitcoin-wallet-visibility-toggle,
+.bitcoin-wallets-list .bitcoin-wallet-visibility-toggle a {
+  color: #a5a5a5;
+  text-decoration: none;
+}
+.bitcoin-wallets-list .bitcoin-wallet-visibility-toggle span {
+  border-bottom: 1px dashed #a5a5a5;
+}
+.bitcoin-wallets-list .bitcoin-wallet-visibility-toggle .wrap-glyphicon {
+  font-size: 90%;
+  margin-left: 4px;
+  border-bottom: none;
+  color: #fff;
+  background-color: #a5a5a5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  line-height: 1.5;
+  display: inline-block;
+  width: 22px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: -5px;
+}
+.bitcoin-wallets-list .bitcoin-wallet-visibility-toggle .wrap-glyphicon .glyphicon {
+  line-height: 1.5;
+}

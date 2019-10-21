@@ -1,0 +1,69 @@
+@import "../config/config";
+
+.news-items {
+
+  &.news-items-single {
+    h1.news-post-item-title {
+      font-size: 140%;
+      text-align: left;
+    }
+    .news-post-item-date {
+      text-align: left;
+    }
+    .news-post-item-content {
+      margin-top: 4em;
+
+      a {
+        color: @capColor;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .news-post-item {
+    color: #333;
+
+    &:first-child {
+      .news-post-item-title {
+        margin-top: 0.5em;
+      }
+    }
+
+    h2.news-post-item-title {
+      font-size: 120%;
+    }
+
+    .news-post-item-title {
+      font-weight: bolder;
+      color: #000;
+      margin-top: 2.3em;
+
+    }
+
+    .news-post-item-date {
+      color: #666;
+      margin: 0.8em 0 0.5em 0;
+      font-size: 90%;
+    }
+    .news-post-item-content-brief {
+      line-height: 1.8em;
+    }
+    .news-post-item-content {
+      img {
+        max-width: 100%;
+      }
+      a {
+        color: @capColor;
+        text-decoration: underline;
+      }
+    }
+    .news-post-item-link {
+      a {
+        color: @capColor;
+        text-decoration: none;
+        border-bottom: 1px dashed @capColor;
+      }
+      font-size: .9em;
+    }
+  }
+}

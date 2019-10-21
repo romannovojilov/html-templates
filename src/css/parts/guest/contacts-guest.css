@@ -1,0 +1,332 @@
+/*
+
+//----------------------------------------------------//
+// Mixins & Includes                                  //
+//----------------------------------------------------//
+@mixin notext {
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.centered	{
+	display: table;
+	width: 100%;
+	height: 100%;
+	> * {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+// PLACEHOLDER MIXIN
+@mixin placeholderColor($input-text-color) {
+	&::-webkit-input-placeholder {color: $input-text-color;}
+	&:-moz-placeholder {color: $input-text-color; opacity: 1;}
+	&::-moz-placeholder {color: $input-text-color; opacity: 1;}
+	&:-ms-input-placeholder {color: $input-text-color;}
+	&:focus:-moz-placeholder {color:transparent; opacity: 1;}
+	&:focus::-moz-placeholder {color:transparent; opacity: 1;}
+	&:focus::-webkit-input-placeholder {color:transparent;}
+	&:focus:-ms-input-placeholder {color:transparent;}
+	&:focus::placeholder {color:transparent;}
+}
+
+@mixin clearfix {
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}
+
+// Clear select without default button
+@mixin clearSelect {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+//elements get appended with "__" and the $name
+@mixin e($name) {
+	@at-root   #{&}__#{$name} {
+		@content;
+	}
+}
+
+//modifiers get appended with "--" and the $name
+@mixin m($name) {
+	@at-root   #{&}--#{$name} {
+		@content;
+	}
+}
+
+ @mixin b($point) {
+	@if $point == desktop {
+		@media (max-width: 1366px) and (min-width:1024px) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (max-width: 1000px) { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-width: 37.5em)  { @content ; }
+	}
+	@else if $point == mobile {
+		@media (max-width: 767px)  { @content ; }
+	}
+	@else if $point == mobile3x {
+		@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx), only screen and (min-resolution: 350dpi) {
+			@content ;
+		}
+	}
+	@else {
+		@media (max-width: $point + 'px')  { @content ; }
+	}
+}
+
+@mixin ie() {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  	@content ;
+	}
+}
+
+@mixin before-img($width, $height) {
+	content: '';
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+}
+
+//----------------------------------------------------//
+// REM FONT_SIZE WITH FALLBACK 												//
+//----------------------------------------------------//
+// USAGE:
+// p {
+//   @include font-size(14px)
+// }
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+@mixin gradient($top, $bottom) {
+   background: $top;
+   background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+   background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom} ',GradientType=0 );
+}
+
+
+@mixin textCut($col) {
+  display: -webkit-box;
+  -webkit-line-clamp: $col;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+.transition {
+	transition: all .2s ease-in-out;
+	&:hover {
+		transition: all .2s ease-in-out;
+	}
+}
+
+.rlist {
+	font-size: 0;
+	line-height: 0;
+}
+.ulist {
+	font-size: $mainFontSize;
+	line-height: $mainFontHeight;
+}
+
+ */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+.transition:hover {
+  transition: all 0.2s ease-in-out;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.ulist {
+  font-size: 14px;
+  line-height: 1.43;
+}
+.rlist {
+  font-size: 0;
+  line-height: 0;
+}
+.contacts-page-guest-body main.main {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.contacts-page-guest .block-1 {
+  background: #fff;
+  padding: 50px 0 80px 0;
+}
+.contacts-page-guest .block-1 .block-1-bg {
+  background: url(../images/external/contacts/jangleur.png) no-repeat 80% top;
+  min-height: 469px;
+}
+.contacts-page-guest .block-1 .support-shift {
+  border: 1px solid #d8e8fa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 30px 40px 30px;
+}
+.contacts-page-guest .block-1 .support-shift legend {
+  background: #fff;
+  margin: 0 5px 0 0;
+  padding: 0 15px;
+  font-size: 103%;
+  font-weight: bolder;
+  display: inline-block;
+  width: auto;
+  border: none;
+}
+.contacts-page-guest .block-1 .support-shift .shift-row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 2em;
+}
+.contacts-page-guest .block-1 .support-shift .shift-row .shift-image {
+  background: url(../images/external/contacts/support-shift.png) no-repeat top left;
+  width: 386px;
+  height: 37px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin: 0 0 auto 0;
+}
+.contacts-page-guest .block-1 .support-shift .shift-row .shift-image.shift-image-working-night {
+  background-position: left -178px;
+}
+.contacts-page-guest .block-1 .support-shift .shift-row .shift-image.shift-image-weekend {
+  background-position: left bottom;
+}
+.contacts-page-guest .block-1 .support-shift .shift-row .shift-ndash {
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin: 1px 20px auto 30px;
+}
+.contacts-page-guest .block-1 .support-shift .shift-row .shift-text {
+  flex-shrink: 1;
+  flex-grow: 0.5;
+  margin: 1px auto auto 5px;
+}
+.contacts-page-guest .block-1 .support-shift .shift-row .shift-time {
+  position: relative;
+  margin: -1em auto 0 55px;
+  color: #aaa;
+}
+.contacts-page-guest .block-1 .support-shift .shift-row .shift-time strong {
+  color: #000;
+}
+.contacts-page-guest .block-2 {
+  background: #f2f3f8;
+  padding: 80px 0;
+}
+.contacts-page-guest .block-2 .left-subblock {
+  background: #e6e7ef;
+  padding: 10px 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #d6dee6;
+}
+.contacts-page-guest .contact-list {
+  font-size: 110%;
+}
+.contacts-page-guest .contact-list h3 {
+  font-size: 125%;
+  margin: 0.5em 0 15px 0;
+}
+.contacts-page-guest .contact-list .circle-icon {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-flex;
+  font-size: 20px;
+  margin-right: 25px;
+}
+.contacts-page-guest .contact-list li {
+  border-bottom: 1px solid #d6dee6;
+  padding: 20px 0;
+}
+.contacts-page-guest .contact-list li:last-child {
+  border-bottom: none;
+}
+.contacts-page-guest .contact-list li .comment {
+  font-size: 80%;
+  color: #666;
+  margin: 5px 30px 0 80px;
+}
+.contacts-page-guest .contact-list a {
+  text-decoration: underline;
+}
+.contacts-page-guest .contact-list img,
+.contacts-page-guest .contact-list div.circle-icon div {
+  color: #80bc1c;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1em;
+  text-align: center;
+  margin: auto;
+}
+.contacts-page-guest .contact-list img {
+  width: 20px;
+  height: 20px;
+}

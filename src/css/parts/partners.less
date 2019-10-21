@@ -1,0 +1,65 @@
+@import "../config/config";
+@import "../mixins/mixins";
+
+.partners__page, .partner-exchange-request  {
+
+  .partner-details {
+    padding: 30px 0;
+    margin: 0 15px;
+    border-bottom: 1px solid @tablesBorderColor;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    .description {
+      font-size: 95%;
+      margin: 1em 0 1em 0;
+    }
+
+    a.website-url {
+      color: @capColorLighter;
+      text-decoration: underline;
+    }
+
+    .partner-controls {
+      padding-top: 30px;
+    }
+
+    .partner-payment-systems {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .partner-payment-system {
+        font-size:85%;
+        color: @colorWhite;
+        background: #8bbaea;
+        margin: 0 13px 8px 0;
+        padding: 3px 10px;
+        .border-radius(10px);
+      }
+    }
+
+    .partner-logo {
+
+      margin: 0 20px auto 0;
+
+      .logo-image-border {
+        display: flex;
+        justify-content: space-between;
+        img {
+          margin: auto;
+          max-width: 85%;
+          max-height: 85%;
+        }
+
+        width: 260px;
+        height: 176px;
+        border: 1px solid @tablesBorderColor;
+        .border-radius(@btnRadius);
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

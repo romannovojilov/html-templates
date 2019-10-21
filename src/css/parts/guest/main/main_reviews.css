@@ -1,0 +1,390 @@
+/*
+
+//----------------------------------------------------//
+// Mixins & Includes                                  //
+//----------------------------------------------------//
+@mixin notext {
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.centered	{
+	display: table;
+	width: 100%;
+	height: 100%;
+	> * {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+// PLACEHOLDER MIXIN
+@mixin placeholderColor($input-text-color) {
+	&::-webkit-input-placeholder {color: $input-text-color;}
+	&:-moz-placeholder {color: $input-text-color; opacity: 1;}
+	&::-moz-placeholder {color: $input-text-color; opacity: 1;}
+	&:-ms-input-placeholder {color: $input-text-color;}
+	&:focus:-moz-placeholder {color:transparent; opacity: 1;}
+	&:focus::-moz-placeholder {color:transparent; opacity: 1;}
+	&:focus::-webkit-input-placeholder {color:transparent;}
+	&:focus:-ms-input-placeholder {color:transparent;}
+	&:focus::placeholder {color:transparent;}
+}
+
+@mixin clearfix {
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}
+
+// Clear select without default button
+@mixin clearSelect {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+//elements get appended with "__" and the $name
+@mixin e($name) {
+	@at-root   #{&}__#{$name} {
+		@content;
+	}
+}
+
+//modifiers get appended with "--" and the $name
+@mixin m($name) {
+	@at-root   #{&}--#{$name} {
+		@content;
+	}
+}
+
+ @mixin b($point) {
+	@if $point == desktop {
+		@media (max-width: 1366px) and (min-width:1024px) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (max-width: 1000px) { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-width: 37.5em)  { @content ; }
+	}
+	@else if $point == mobile {
+		@media (max-width: 767px)  { @content ; }
+	}
+	@else if $point == mobile3x {
+		@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx), only screen and (min-resolution: 350dpi) {
+			@content ;
+		}
+	}
+	@else {
+		@media (max-width: $point + 'px')  { @content ; }
+	}
+}
+
+@mixin ie() {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  	@content ;
+	}
+}
+
+@mixin before-img($width, $height) {
+	content: '';
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+}
+
+//----------------------------------------------------//
+// REM FONT_SIZE WITH FALLBACK 												//
+//----------------------------------------------------//
+// USAGE:
+// p {
+//   @include font-size(14px)
+// }
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+@mixin gradient($top, $bottom) {
+   background: $top;
+   background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+   background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom} ',GradientType=0 );
+}
+
+
+@mixin textCut($col) {
+  display: -webkit-box;
+  -webkit-line-clamp: $col;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+.transition {
+	transition: all .2s ease-in-out;
+	&:hover {
+		transition: all .2s ease-in-out;
+	}
+}
+
+.rlist {
+	font-size: 0;
+	line-height: 0;
+}
+.ulist {
+	font-size: $mainFontSize;
+	line-height: $mainFontHeight;
+}
+
+ */
+.transition,
+.reviews .slick-arrow {
+  transition: all 0.2s ease-in-out;
+}
+.transition:hover {
+  transition: all 0.2s ease-in-out;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.ulist,
+.reviews__list-item,
+.reviews-person__photo,
+.reviews-person__caption {
+  font-size: 14px;
+  line-height: 1.43;
+}
+.rlist,
+.reviews__list,
+.reviews-person {
+  font-size: 0;
+  line-height: 0;
+}
+.reviews__list {
+  position: relative;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.reviews__list:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #edf5f9;
+}
+@media (max-width: 1280 'px') {
+  .reviews__list {
+    padding: 0 30px;
+  }
+  .reviews__list:after {
+    right: 30px;
+  }
+}
+.reviews__list-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+.reviews__list-item:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #edf5f9;
+}
+.reviews__list-item:first-child:after {
+  display: none;
+}
+.reviews .slick-arrow {
+  top: 129px;
+}
+.reviews__more {
+  text-align: center;
+}
+.reviews__more-btn {
+  width: 180px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.reviews .slick-arrow {
+  position: absolute;
+  z-index: 4;
+  top: calc((57px - 41px)/2);
+  display: block !important;
+  padding: 0;
+  width: 41px;
+  height: 41px ;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #d5dfe4;
+  font-size: 15px;
+  line-height: 36px;
+  text-align: center;
+  fill: #d5dfe4;
+  color: #d5dfe4;
+  background: transparent;
+  cursor: pointer;
+}
+.reviews .slick-arrow__icon {
+  position: absolute;
+  top: calc(20px - 7px);
+  left: calc(20px - 6px);
+}
+.reviews .slick-arrow.slick-disabled {
+  opacity: 0.5;
+}
+.reviews .slick-arrow.slick-disabled:hover {
+  border-color: #d5dfe4;
+  fill: #d5dfe4;
+}
+.reviews .slick-arrow:hover {
+  border-color: #80bc1c;
+  fill: #80bc1c;
+  color: #80bc1c;
+}
+.reviews .slick-arrow-prev {
+  left: -90px;
+}
+@media (max-width: 1386 'px') {
+  .reviews .slick-arrow-prev {
+    left: -50px;
+  }
+}
+@media (max-width: 1280 'px') {
+  .reviews .slick-arrow-prev {
+    left: -10px;
+  }
+}
+.reviews .slick-arrow-prev .icon-chevron {
+  transform: rotate(180deg);
+}
+.reviews .slick-arrow-prev .capitalist-icon-chevron {
+  transform: rotate(180deg);
+}
+.reviews .slick-arrow-next {
+  right: -90px;
+}
+.reviews .slick-arrow-next .slick-arrow__icon {
+  left: 16px;
+}
+@media (max-width: 1386 'px') {
+  .reviews .slick-arrow-next {
+    left: -50px;
+  }
+}
+@media (max-width: 1280 'px') {
+  .reviews .slick-arrow-next {
+    left: -10px;
+  }
+}
+.reviews .icon-chevron {
+  width: 8px;
+  height: 14px;
+}
+.reviews .slick-arrow {
+  top: calc(50%);
+}
+.reviews-item__logo {
+  height: 160px;
+  padding: 20px 50px;
+  border-bottom: 1px solid #edf5f9;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+}
+.reviews-item__logo:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.reviews-item__logo img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
+}
+.reviews-item__content {
+  padding: 30px 28px 13px;
+}
+.reviews-item__content-head {
+  padding-bottom: 23px;
+}
+.reviews-person {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.reviews-person__photo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 74px;
+  height: 74px;
+  margin-right: 23px;
+  overflow: hidden;
+}
+.reviews-person__photo img {
+  border-radius: 50%;
+  width: 100%;
+}
+.reviews-person__caption {
+  display: inline-block;
+  vertical-align: middle;
+}
+.reviews-person__name {
+  padding-bottom: 7px;
+  font: 400 18px/1 'Proxima Nova Rg', sans-serif, "Verdana";
+  color: #27282b;
+}
+.reviews-person__position {
+  padding-bottom: 4px;
+  font: 300 14px/1 'Proxima Nova Rg', sans-serif, "Verdana";
+  color: #5e6872;
+}
+.reviews-person__company {
+  font: 400 15px/1 'Proxima Nova Rg', sans-serif, "Verdana";
+  color: #80bc1c;
+}

@@ -1,0 +1,341 @@
+/*
+
+//----------------------------------------------------//
+// Mixins & Includes                                  //
+//----------------------------------------------------//
+@mixin notext {
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.centered	{
+	display: table;
+	width: 100%;
+	height: 100%;
+	> * {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+}
+
+// PLACEHOLDER MIXIN
+@mixin placeholderColor($input-text-color) {
+	&::-webkit-input-placeholder {color: $input-text-color;}
+	&:-moz-placeholder {color: $input-text-color; opacity: 1;}
+	&::-moz-placeholder {color: $input-text-color; opacity: 1;}
+	&:-ms-input-placeholder {color: $input-text-color;}
+	&:focus:-moz-placeholder {color:transparent; opacity: 1;}
+	&:focus::-moz-placeholder {color:transparent; opacity: 1;}
+	&:focus::-webkit-input-placeholder {color:transparent;}
+	&:focus:-ms-input-placeholder {color:transparent;}
+	&:focus::placeholder {color:transparent;}
+}
+
+@mixin clearfix {
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}
+
+// Clear select without default button
+@mixin clearSelect {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+//elements get appended with "__" and the $name
+@mixin e($name) {
+	@at-root   #{&}__#{$name} {
+		@content;
+	}
+}
+
+//modifiers get appended with "--" and the $name
+@mixin m($name) {
+	@at-root   #{&}--#{$name} {
+		@content;
+	}
+}
+
+ @mixin b($point) {
+	@if $point == desktop {
+		@media (max-width: 1366px) and (min-width:1024px) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (max-width: 1000px) { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-width: 37.5em)  { @content ; }
+	}
+	@else if $point == mobile {
+		@media (max-width: 767px)  { @content ; }
+	}
+	@else if $point == mobile3x {
+		@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx), only screen and (min-resolution: 350dpi) {
+			@content ;
+		}
+	}
+	@else {
+		@media (max-width: $point + 'px')  { @content ; }
+	}
+}
+
+@mixin ie() {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  	@content ;
+	}
+}
+
+@mixin before-img($width, $height) {
+	content: '';
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+}
+
+//----------------------------------------------------//
+// REM FONT_SIZE WITH FALLBACK 												//
+//----------------------------------------------------//
+// USAGE:
+// p {
+//   @include font-size(14px)
+// }
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+@mixin gradient($top, $bottom) {
+   background: $top;
+   background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+   background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+   background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom} ',GradientType=0 );
+}
+
+
+@mixin textCut($col) {
+  display: -webkit-box;
+  -webkit-line-clamp: $col;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+.transition {
+	transition: all .2s ease-in-out;
+	&:hover {
+		transition: all .2s ease-in-out;
+	}
+}
+
+.rlist {
+	font-size: 0;
+	line-height: 0;
+}
+.ulist {
+	font-size: $mainFontSize;
+	line-height: $mainFontHeight;
+}
+
+ */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+.transition:hover {
+  transition: all 0.2s ease-in-out;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.ulist {
+  font-size: 14px;
+  line-height: 1.43;
+}
+.rlist {
+  font-size: 0;
+  line-height: 0;
+}
+.registration-page .reg-contacts-required-alert {
+  margin-top: 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #f2e483;
+  padding: 15px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.registration-page .reg-contacts-required-alert .glyphicon {
+  color: #f6cc09;
+  font-size: 120%;
+}
+.registration-page .reg-contacts-required-alert > div:first-child {
+  width: 20px;
+  margin-right: 15px;
+}
+.registration-page .reg-contacts-required-alert .text-muted {
+  text-align: justify;
+}
+.login-page #regCaptcha,
+.registration-page #regCaptcha,
+.guest-forms #regCaptcha {
+  cursor: pointer;
+  cursor: hand;
+}
+.login-page form input[type=checkbox].switcher + .checkbox-label:after,
+.registration-page form input[type=checkbox].switcher + .checkbox-label:after,
+.guest-forms form input[type=checkbox].switcher + .checkbox-label:after {
+  background: #cccccc;
+}
+.login-page form input[type=checkbox].switcher:checked + .checkbox-label:after,
+.registration-page form input[type=checkbox].switcher:checked + .checkbox-label:after,
+.guest-forms form input[type=checkbox].switcher:checked + .checkbox-label:after {
+  background: #80bd1c;
+}
+.login-page .login-buttons-row,
+.registration-page .login-buttons-row,
+.guest-forms .login-buttons-row {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.login-page .login-buttons-row .lbr-col,
+.registration-page .login-buttons-row .lbr-col,
+.guest-forms .login-buttons-row .lbr-col {
+  margin: auto;
+}
+.login-page a.link,
+.registration-page a.link,
+.guest-forms a.link {
+  color: #5c8f08;
+}
+.login-page a.link:hover,
+.registration-page a.link:hover,
+.guest-forms a.link:hover {
+  text-decoration: underline;
+}
+.login-page .contacts-heading-switch .chs-col-title h3,
+.registration-page .contacts-heading-switch .chs-col-title h3,
+.guest-forms .contacts-heading-switch .chs-col-title h3 {
+  margin: 0;
+  line-height: 36px;
+}
+.login-page .contacts-heading-switch .chs-col-switch,
+.registration-page .contacts-heading-switch .chs-col-switch,
+.guest-forms .contacts-heading-switch .chs-col-switch {
+  text-align: right;
+}
+.login-page .panel .panel-body,
+.registration-page .panel .panel-body,
+.guest-forms .panel .panel-body {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.login-page .panel .panel-body .form-group,
+.registration-page .panel .panel-body .form-group,
+.guest-forms .panel .panel-body .form-group {
+  margin-bottom: 25px;
+}
+.login-page .panel-login,
+.registration-page .panel-login,
+.guest-forms .panel-login {
+  margin: 0 auto;
+  width: 50%;
+}
+.login-page .panel-login .panel-heading,
+.registration-page .panel-login .panel-heading,
+.guest-forms .panel-login .panel-heading,
+.login-page .panel-login .panel-body,
+.registration-page .panel-login .panel-body,
+.guest-forms .panel-login .panel-body,
+.login-page .panel-login .panel-footer,
+.registration-page .panel-login .panel-footer,
+.guest-forms .panel-login .panel-footer {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.login-page .panel-login .panel-heading,
+.registration-page .panel-login .panel-heading,
+.guest-forms .panel-login .panel-heading {
+  background: none;
+  padding-bottom: 0;
+}
+.login-page .panel-login .panel-heading ul,
+.registration-page .panel-login .panel-heading ul,
+.guest-forms .panel-login .panel-heading ul {
+  margin-top: 1.3em;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+  justify-items: flex-start;
+}
+.login-page .panel-login .panel-heading ul li,
+.registration-page .panel-login .panel-heading ul li,
+.guest-forms .panel-login .panel-heading ul li {
+  margin: 0 25px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-items: stretch;
+}
+.login-page .panel-login .panel-heading ul li.active a,
+.registration-page .panel-login .panel-heading ul li.active a,
+.guest-forms .panel-login .panel-heading ul li.active a,
+.login-page .panel-login .panel-heading ul li:hover a,
+.registration-page .panel-login .panel-heading ul li:hover a,
+.guest-forms .panel-login .panel-heading ul li:hover a {
+  border-bottom: 3px solid #93bb36;
+  color: #000;
+}
+.login-page .panel-login .panel-heading ul li a,
+.registration-page .panel-login .panel-heading ul li a,
+.guest-forms .panel-login .panel-heading ul li a {
+  color: #a5a5a5;
+  border-bottom: 3px solid white;
+  padding-bottom: 10px;
+}
