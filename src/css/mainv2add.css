@@ -12564,10 +12564,6 @@ body.guest-page {
   height: 60px;
   width: 200px;
 }
-.marketplace-menu .partner-card .p-logo_left {
-  margin-top: 5px;
-  width: 60px;
-}
 .marketplace-menu .partner-card .p-logo img {
   vertical-align: middle;
   max-width: 100%;
@@ -13139,9 +13135,6 @@ body.guest-page {
 }
 .marketplace-menu .partner-card_style_create .p-sep {
   margin: 0 20px;
-}
-.partner-card_style_fl {
-  grid-template-columns: none !important;
 }
 .partner-card__right div {
   line-height: 1;
