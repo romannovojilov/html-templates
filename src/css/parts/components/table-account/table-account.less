@@ -1,0 +1,65 @@
+.table-account {
+    font-size: 13px;
+    line-height: 16px;
+    color: #7D8388;
+
+    &__empty {
+        display: block;
+        width: 13px;
+        height: 1px;
+        background-color: #DADADA;
+    }
+
+    &__status {
+        color: #909599;
+        font-weight: 600;
+
+        &-icon {
+            color: #82BA2E;
+            margin-right: 2px;
+        }
+    }
+
+    &__balance {
+        font-weight: 600;
+        color: #82BA2E;
+    }
+    
+    &__btn {
+        float: right;
+        padding: 8px 22px;
+        font-size: 14px;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+
+        &>* {
+            margin-right: 12px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__avatar {
+        width: 30px;
+        height: 30px;
+        background: #82BA2E;
+        font-size: 13px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+    }
+
+    &__email {
+        font-size: 13px;
+        line-height: 16px;
+        color: #333333;
+        font-weight: 600;
+    }
+}
