@@ -13228,3 +13228,42 @@ body.guest-page {
   border: 1px solid #DADADA !important;
   font-weight: normal !important;
 }
+.rules {
+  margin: 25px 0;
+}
+.rules__header {
+  font-size: 18px;
+  line-height: 125%;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.rules__p,
+.rules__list {
+  margin: 15px 0;
+  font-size: 14px;
+  line-height: 145%;
+}
+.rules__list {
+  display: block;
+}
+.rules__list > li {
+  display: block;
+  margin: 15px 0;
+  position: relative;
+  padding-left: 28px;
+}
+.rules__list > li::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #82BA2E;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+.rules__link {
+  color: #80bd1c;
+  border-bottom: 1px dashed #80bd1c;
+}

@@ -1,0 +1,44 @@
+.rules {
+    margin: 25px 0;
+
+    &__header {
+        font-size: 18px;
+        line-height: 125%;
+        margin-bottom: 18px;
+        font-weight: 600;
+    }
+
+    &__p,
+    &__list {
+        margin: 15px 0;
+        font-size: 14px;
+        line-height: 145%;
+    }
+
+    &__list {
+        display: block;
+
+        & > li {
+            display: block;
+            margin: 15px 0;
+            position: relative;
+            padding-left: 28px;
+            &::before {
+                content: "";
+                display: block;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: #82BA2E;
+                position: absolute;
+                left: 0;
+                top: 7px;
+            }
+        }
+    }
+
+    &__link {
+        color: #80bd1c;
+        border-bottom: 1px dashed #80bd1c;
+    }
+}
