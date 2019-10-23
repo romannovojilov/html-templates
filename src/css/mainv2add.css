@@ -13137,6 +13137,9 @@ body.guest-page {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.marketplace-menu .partner-card_style_create .p-sep {
+  margin: 0 20px;
+}
 .partner-card_style_fl {
   grid-template-columns: none !important;
 }
@@ -13151,4 +13154,77 @@ body.guest-page {
   font-size: 13px;
   line-height: 16px;
   color: #909599;
+}
+.modal_style_modern .close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 35px;
+  line-height: 20px;
+  z-index: 2;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.modal_style_modern .modal-title {
+  font-family: 'Proxima Nova Bd';
+  font-size: 32px;
+  line-height: 49px;
+  font-weight: 800;
+  margin: -10px 0;
+}
+.modal_style_modern .modal-subtitle {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  margin-bottom: -5px;
+}
+.modal_style_modern .modal-header {
+  padding: 30px;
+}
+.modal_style_modern .modal-body {
+  padding: 0 30px;
+}
+.modal_style_modern .modal-footer {
+  padding: 30px;
+}
+.modal_style_modern .modal-footer .btn {
+  margin-right: 12px;
+}
+.modal_style_modern .modal-footer .btn:last-child {
+  margin-right: 0;
+}
+.modal-body_fix-height {
+  max-height: 400px;
+  overflow: auto;
+}
+.pres-modal {
+  text-align: center;
+  margin: 70px 50px;
+}
+.pres-modal__logo {
+  margin-bottom: 30px;
+}
+.pres-modal__logo > img {
+  vertical-align: bottom;
+  border: 0;
+}
+.pres-modal__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.pres-modal__desc {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 auto;
+  width: 90%;
+}
+.pres-modal__footer {
+  margin-top: 30px;
+}
+.pres-modal__btn-close {
+  margin-right: 20px;
+  border: 1px solid #DADADA !important;
+  font-weight: normal !important;
 }
