@@ -449,19 +449,16 @@
 
                                 <div class="temp-pager">
                                     <div id="temp-pager__page_0" class="temp-pager__page">
-                                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-                                            data-target="#myModal_1">
-                                            Открыть первый модальник
-                                        </button>
-                                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-                                            data-target="#myModal_2">
-                                            Открыть второй модальник
-                                        </button>
+                                        Start page with nothing, just opened modal
                                     </div>
                                     <div id="temp-pager__page_1" class="temp-pager__page">
                                         <div class="marketplace-menu">
                                             <div style="margin-bottom: 20px;">
-                                                <button class="btn btn-back">
+                                                <button class="btn btn-back temp-pager__action"
+                                                    data-toggle="modal"
+                                                    data-target="#myModal_1"
+                                                    data-page="#temp-pager__page_0"
+                                                    data-anim="prev">
                                                     <i class="glyphicon glyphicon-menu-left"></i>
                                                     Назад
                                                 </button>
@@ -482,9 +479,11 @@
                                                             <img src="assets/imagecache/1/1.png" alt="Megapu.sh">
                                                         </div>
                                                         <div>
-                                                            <a title="Megapu.sh" href="https://www.megapu.sh"
-                                                                target="_blank"
-                                                                class="btn btn-success">Воспользоваться</a>
+                                                            <button class="btn btn-success temp-pager__action"
+                                                                data-page="#temp-pager__page_2"
+                                                                data-anim="next">
+                                                                Воспользоваться
+                                                            </button>
                                                         </div>
                                                         <div>
                                                             <span class="partner-card__label">
@@ -526,15 +525,59 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <div class="marketplace-menu__category-group-partial category-group-partial four-blocks-in-a-row">
+                                                <div class="category-group-header">
+                                                    <div>
+                                                        <h3>Другие рекламные сети:</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="category-group-items">
+                                                    <a title="Vkontakte" href="#" class="category-group-partner">
+                                                        <div class="p-logo"><img src="assets/imagecache/1/5.png"
+                                                                alt="Vkontakte">
+                                                        </div>
+                                                        <div class="p-content">
+                                                            <div class="p-name">Vkontakte</div>
+                                                        </div>
+                                                    </a>
+                                                    <a title="BuyMedia" href="#" class="category-group-partner">
+                                                        <div class="p-logo"><img src="assets/imagecache/1/2.png"
+                                                                alt="BuyMedia">
+                                                        </div>
+                                                        <div class="p-content">
+                                                            <div class="p-name">BuyMedia</div>
+                                                        </div>
+                                                    </a>
+                                                    <a title="MGID" href="#" class="category-group-partner">
+                                                        <div class="p-logo"><img src="assets/imagecache/1/3.png"
+                                                                alt="MGID"></div>
+                                                        <div class="p-content">
+                                                            <div class="p-name">MGID</div>
+                                                        </div>
+                                                    </a>
+                                                    <a title="zaleycash" href="#" class="category-group-partner">
+                                                        <div class="p-logo"><img src="assets/imagecache/1/4.png"
+                                                                alt="zaleycash">
+                                                        </div>
+                                                        <div class="p-content">
+                                                            <div class="p-name">zaleycash</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="show-more-link"><a href="#">Показать еще (8)</a> <i
+                                                        class="glyphicon glyphicon-menu-down"></i></div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div id="temp-pager__page_2" class="temp-pager__page">
                                         <div class="marketplace-menu">
                                             <div style="margin-bottom: 20px;">
-                                                <button class="btn btn-back">
-                                                    <i class="glyphicon glyphicon-menu-left"></i>
-                                                    Назад
-                                                </button>
+                                                    <button class="btn btn-back temp-pager__action"
+                                                        data-page="#temp-pager__page_1"
+                                                        data-anim="prev">
+                                                        <i class="glyphicon glyphicon-menu-left"></i>
+                                                        Назад
+                                                    </button>
                                             </div>
                                             <div class="partner-card partner-card_style_create">
                                                 <div class="p-content">
@@ -552,7 +595,10 @@
                                                             <input type="text" class="form-control">
                                                         </div>
                                                         <div class="create-form__form-group form-group">
-                                                            <button type="submit" class="btn btn-success">
+                                                            <!-- <button type="submit" class="btn btn-success">
+                                                                Создать
+                                                            </button> -->
+                                                            <button data-toggle="modal" data-target="#myModal_2" type="button" class="btn btn-success">
                                                                 Создать
                                                             </button>
                                                         </div>
@@ -564,7 +610,9 @@
                                     <div id="temp-pager__page_3" class="temp-pager__page">
                                         <div class="marketplace-menu">
                                             <div style="margin-bottom: 20px;">
-                                                <button class="btn btn-back">
+                                                <button class="btn btn-back temp-pager__action"
+                                                    data-page="#temp-pager__page_2"
+                                                    data-anim="prev">
                                                     <i class="glyphicon glyphicon-menu-left"></i>
                                                     Назад
                                                 </button>
@@ -799,7 +847,13 @@
                         <div class="pres-modal__footer">
                             <button type="button" class="pres-modal__btn-close btn btn-default"
                                 data-dismiss="modal">Закрыть</button>
-                            <button type="button" class="btn btn-primary">Перейти в раздел</button>
+                            <button type="button"
+                                class="temp-pager__action btn btn-primary"
+                                data-dismiss="modal"
+                                data-page="#temp-pager__page_1"
+                                data-anim="next">
+                                Перейти в раздел
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -868,14 +922,15 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-warning" data-dismiss="modal">Отмена</button>
-                    <button type="button" class="btn btn-primary">Принять</button>
+                    <button type="button" class="btn btn-primary temp-pager__action"
+                        data-dismiss="modal"
+                        data-page="#temp-pager__page_3"
+                        data-anim="next">Принять</button>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        $('[data-target="#myModal_1"]').click();
-    </script>
+    <script type="text/javascript" src="src/js/temp-pager.js"></script>
 </body>
 
 </html>

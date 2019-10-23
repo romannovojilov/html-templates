@@ -1,16 +1,50 @@
 .temp-pager {
-
+    overflow: hidden;
+    margin: 0 -15px;
+    padding: 0 15px;
 
     &__page {
-        
-        margin-top: 70px;
-        border-top: 2px solid gray;
-        padding-top: 70px;
+
+        display: none;
 
         &:first-child {
-            margin-top: 0;
-            border-top: 0;
-            padding-top: 0;
+            display: block;
         }
+
+        &_prev {
+            display: block;
+            animation: prev ease .4s 1;
+        }
+
+        &_next {
+            display: block;
+            animation: next ease .4s 1;
+        }
+    }
+
+    &__action {}
+}
+
+@keyframes prev {
+    0% {
+        opacity: .1;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes next {
+    0% {
+        opacity: .1;
+        transform: translateX(300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
